@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B35624081C78237D00D4D8C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624071C78237D00D4D8C7 /* AppDelegate.m */; };
-		B356240B1C78237D00D4D8C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B356240A1C78237D00D4D8C7 /* ViewController.m */; };
-		B356240E1C78237D00D4D8C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B356240C1C78237D00D4D8C7 /* Main.storyboard */; };
 		B35624101C78237D00D4D8C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B356240F1C78237D00D4D8C7 /* Assets.xcassets */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
 		B35624291C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */; };
+		B36CEE9B1C7886B700362520 /* JSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEE9A1C7886B700362520 /* JSTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +37,6 @@
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B35624061C78237D00D4D8C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B35624071C78237D00D4D8C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B35624091C78237D00D4D8C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B356240A1C78237D00D4D8C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B356240D1C78237D00D4D8C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B356240F1C78237D00D4D8C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B35624141C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B35624191C78237D00D4D8C7 /* BaiSiBuDeJieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiSiBuDeJieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +45,8 @@
 		B35624241C78237D00D4D8C7 /* BaiSiBuDeJieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiSiBuDeJieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaiSiBuDeJieUITests.m; sourceTree = "<group>"; };
 		B356242A1C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B36CEE991C7886B700362520 /* JSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBarController.h; sourceTree = "<group>"; };
+		B36CEE9A1C7886B700362520 /* JSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +99,8 @@
 			children = (
 				B35624061C78237D00D4D8C7 /* AppDelegate.h */,
 				B35624071C78237D00D4D8C7 /* AppDelegate.m */,
-				B35624091C78237D00D4D8C7 /* ViewController.h */,
-				B356240A1C78237D00D4D8C7 /* ViewController.m */,
-				B356240C1C78237D00D4D8C7 /* Main.storyboard */,
-				B356240F1C78237D00D4D8C7 /* Assets.xcassets */,
-				B35624141C78237D00D4D8C7 /* Info.plist */,
+				B36CEE991C7886B700362520 /* JSTabBarController.h */,
+				B36CEE9A1C7886B700362520 /* JSTabBarController.m */,
 				B35624031C78237D00D4D8C7 /* Supporting Files */,
 			);
 			path = BaiSiBuDeJie;
@@ -114,6 +109,8 @@
 		B35624031C78237D00D4D8C7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B356240F1C78237D00D4D8C7 /* Assets.xcassets */,
+				B35624141C78237D00D4D8C7 /* Info.plist */,
 				B35624041C78237D00D4D8C7 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -199,6 +196,7 @@
 		B35623F81C78237D00D4D8C7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JS;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = leo;
 				TargetAttributes = {
@@ -241,7 +239,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B35624101C78237D00D4D8C7 /* Assets.xcassets in Resources */,
-				B356240E1C78237D00D4D8C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B356240B1C78237D00D4D8C7 /* ViewController.m in Sources */,
+				B36CEE9B1C7886B700362520 /* JSTabBarController.m in Sources */,
 				B35624081C78237D00D4D8C7 /* AppDelegate.m in Sources */,
 				B35624051C78237D00D4D8C7 /* main.m in Sources */,
 			);
@@ -302,17 +299,6 @@
 			targetProxy = B35624251C78237D00D4D8C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		B356240C1C78237D00D4D8C7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B356240D1C78237D00D4D8C7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B356242B1C78237D00D4D8C7 /* Debug */ = {
@@ -486,6 +472,7 @@
 				B356242F1C78237D00D4D8C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B35624301C78237D00D4D8C7 /* Build configuration list for PBXNativeTarget "BaiSiBuDeJieTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +481,7 @@
 				B35624321C78237D00D4D8C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B35624331C78237D00D4D8C7 /* Build configuration list for PBXNativeTarget "BaiSiBuDeJieUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +490,7 @@
 				B35624351C78237D00D4D8C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
