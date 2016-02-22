@@ -1,0 +1,34 @@
+
+//
+//  leoPch.pch
+//  BaiSiBuDeJie
+//
+//  Created by leo on 16/2/21.
+//  Copyright © 2016年 leo. All rights reserved.
+//
+
+#ifndef leoPch_pch
+#define leoPch_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+JSExtension.h"
+#import "UIBarButtonItem+JSExtension.h"
+
+
+#define JSKeyWindow [UIApplication sharedApplication].keyWindow
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+#define JSLog(...) NSLog(__VA_ARGS__)
+#else // 发布
+#define JSLog(...)
+#endif
+
+#define JSLogFunc JSLog(@"%s", __func__)
+
+
+
+#endif /* leoPch_pch */

@@ -7,6 +7,12 @@
 //
 
 #import "JSTabBarController.h"
+#import "JSEssenceViewController.h"
+#import "JSNewViewController.h"
+#import "JSFriendTrendsViewController.h"
+#import "JSMeViewController.h"
+
+#import "JSTabBar.h"
 
 @interface JSTabBarController ()
 
@@ -47,21 +53,26 @@
 - (void)setUpAllTabBarItem {
     
     // 精华
-    UIViewController *essence = [[UIViewController alloc] init];
+    JSEssenceViewController *essence = [[JSEssenceViewController alloc] init];
     [self setUpChildTabBarItemWithImage:[UIImage imageNamed:@"tabBar_essence_icon"] selectedImage:[UIImage imageNamed:@"tabBar_essence_click_icon"] ViewController:essence title:@"精华"];
     
     // 新帖
-    UIViewController *new = [[UIViewController alloc] init];
+    JSNewViewController *new = [[JSNewViewController alloc] init];
     [self setUpChildTabBarItemWithImage:[UIImage imageNamed:@"tabBar_new_icon"] selectedImage:[UIImage imageNamed:@"tabBar_new_click_icon"] ViewController:new title:@"新帖"];
     
     // 关注
-    UIViewController *friendTrends = [[UIViewController alloc] init];
+    JSFriendTrendsViewController *friendTrends = [[JSFriendTrendsViewController alloc] init];
     [self setUpChildTabBarItemWithImage:[UIImage imageNamed:@"tabBar_friendTrends_icon"] selectedImage:[UIImage imageNamed:@"tabBar_friendTrends_click_icon"] ViewController:friendTrends title:@"关注"];
     
     // 我
-    UIViewController *me = [[UIViewController alloc] init];
+    JSMeViewController *me = [[JSMeViewController alloc] init];
     [self setUpChildTabBarItemWithImage:[UIImage imageNamed:@"tabBar_me_icon"] selectedImage:[UIImage imageNamed:@"tabBar_me_click_icon"] ViewController:me title:@"我"];
     
+    
+    // 更换tabBar
+    // KVC
+    [self setValue:[[JSTabBar alloc] init] forKey:@"tabBar"];
+
 }
 
 #pragma mark - 设置每个 TabBarItem
@@ -72,7 +83,11 @@
     // 设置图片样式为原始图片
     selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = selectedImage;
-    [self addChildViewController:vc];
+    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+    // 包装一个导航控制器，添加导航控制器为 tabBarController 的子控制器
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [self addChildViewController:nav];
 }
 
 

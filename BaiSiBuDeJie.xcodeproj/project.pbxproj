@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B31FED901C7AF48700AEB98E /* UIBarButtonItem+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FED8F1C7AF48700AEB98E /* UIBarButtonItem+JSExtension.m */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B35624081C78237D00D4D8C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624071C78237D00D4D8C7 /* AppDelegate.m */; };
 		B35624101C78237D00D4D8C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B356240F1C78237D00D4D8C7 /* Assets.xcassets */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
 		B35624291C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */; };
 		B36CEE9B1C7886B700362520 /* JSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEE9A1C7886B700362520 /* JSTabBarController.m */; };
+		B36CEEB41C7989A600362520 /* JSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEB31C7989A600362520 /* JSEssenceViewController.m */; };
+		B36CEEB71C7989B800362520 /* JSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEB61C7989B800362520 /* JSNewViewController.m */; };
+		B36CEEBA1C7989C700362520 /* JSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEB91C7989C700362520 /* JSFriendTrendsViewController.m */; };
+		B36CEEBD1C7989D200362520 /* JSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEBC1C7989D200362520 /* JSMeViewController.m */; };
+		B36CEEC01C7996A200362520 /* JSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEBF1C7996A200362520 /* JSTabBar.m */; };
+		B36CEEC71C79A60A00362520 /* UIView+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEC61C79A60A00362520 /* UIView+JSExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B31FED8E1C7AF48700AEB98E /* UIBarButtonItem+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+JSExtension.h"; sourceTree = "<group>"; };
+		B31FED8F1C7AF48700AEB98E /* UIBarButtonItem+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+JSExtension.m"; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B35624061C78237D00D4D8C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B35624071C78237D00D4D8C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B35624061C78237D00D4D8C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
+		B35624071C78237D00D4D8C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		B356240F1C78237D00D4D8C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B35624141C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B35624191C78237D00D4D8C7 /* BaiSiBuDeJieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiSiBuDeJieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,8 +54,21 @@
 		B35624241C78237D00D4D8C7 /* BaiSiBuDeJieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiSiBuDeJieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaiSiBuDeJieUITests.m; sourceTree = "<group>"; };
 		B356242A1C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B36CEE991C7886B700362520 /* JSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBarController.h; sourceTree = "<group>"; };
-		B36CEE9A1C7886B700362520 /* JSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBarController.m; sourceTree = "<group>"; };
+		B36CEE991C7886B700362520 /* JSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSTabBarController.h; path = ../../../JSTabBarController.h; sourceTree = "<group>"; };
+		B36CEE9A1C7886B700362520 /* JSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSTabBarController.m; path = ../../../JSTabBarController.m; sourceTree = "<group>"; };
+		B36CEEB21C7989A600362520 /* JSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEssenceViewController.h; sourceTree = "<group>"; };
+		B36CEEB31C7989A600362520 /* JSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEssenceViewController.m; sourceTree = "<group>"; };
+		B36CEEB51C7989B800362520 /* JSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNewViewController.h; sourceTree = "<group>"; };
+		B36CEEB61C7989B800362520 /* JSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNewViewController.m; sourceTree = "<group>"; };
+		B36CEEB81C7989C700362520 /* JSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFriendTrendsViewController.h; sourceTree = "<group>"; };
+		B36CEEB91C7989C700362520 /* JSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFriendTrendsViewController.m; sourceTree = "<group>"; };
+		B36CEEBB1C7989D200362520 /* JSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMeViewController.h; sourceTree = "<group>"; };
+		B36CEEBC1C7989D200362520 /* JSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMeViewController.m; sourceTree = "<group>"; };
+		B36CEEBE1C7996A200362520 /* JSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBar.h; sourceTree = "<group>"; };
+		B36CEEBF1C7996A200362520 /* JSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBar.m; sourceTree = "<group>"; };
+		B36CEEC21C79990000362520 /* leoPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leoPch.pch; sourceTree = "<group>"; };
+		B36CEEC51C79A60A00362520 /* UIView+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JSExtension.h"; sourceTree = "<group>"; };
+		B36CEEC61C79A60A00362520 /* UIView+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JSExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +119,7 @@
 		B35624021C78237D00D4D8C7 /* BaiSiBuDeJie */ = {
 			isa = PBXGroup;
 			children = (
-				B35624061C78237D00D4D8C7 /* AppDelegate.h */,
-				B35624071C78237D00D4D8C7 /* AppDelegate.m */,
-				B36CEE991C7886B700362520 /* JSTabBarController.h */,
-				B36CEE9A1C7886B700362520 /* JSTabBarController.m */,
+				B36CEE9C1C79894500362520 /* Classes */,
 				B35624031C78237D00D4D8C7 /* Supporting Files */,
 			);
 			path = BaiSiBuDeJie;
@@ -132,6 +151,216 @@
 				B356242A1C78237D00D4D8C7 /* Info.plist */,
 			);
 			path = BaiSiBuDeJieUITests;
+			sourceTree = "<group>";
+		};
+		B36CEE9C1C79894500362520 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEE9D1C79894500362520 /* Essence */,
+				B36CEEA91C79894500362520 /* New */,
+				B36CEEA11C79894500362520 /* FriendTrends */,
+				B36CEEA51C79894500362520 /* Me */,
+				B36CEEAD1C79894500362520 /* Other */,
+				B36CEEAE1C79894500362520 /* Tabbar */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B36CEE9D1C79894500362520 /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEE9E1C79894500362520 /* Controller */,
+				B36CEE9F1C79894500362520 /* Model */,
+				B36CEEA01C79894500362520 /* View */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		B36CEE9E1C79894500362520 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEEB21C7989A600362520 /* JSEssenceViewController.h */,
+				B36CEEB31C7989A600362520 /* JSEssenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B36CEE9F1C79894500362520 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B36CEEA01C79894500362520 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B36CEEA11C79894500362520 /* FriendTrends */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEEA21C79894500362520 /* Controller */,
+				B36CEEA31C79894500362520 /* Model */,
+				B36CEEA41C79894500362520 /* View */,
+			);
+			path = FriendTrends;
+			sourceTree = "<group>";
+		};
+		B36CEEA21C79894500362520 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEEB81C7989C700362520 /* JSFriendTrendsViewController.h */,
+				B36CEEB91C7989C700362520 /* JSFriendTrendsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B36CEEA31C79894500362520 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B36CEEA41C79894500362520 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B36CEEA51C79894500362520 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEEA61C79894500362520 /* Controller */,
+				B36CEEA71C79894500362520 /* Model */,
+				B36CEEA81C79894500362520 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		B36CEEA61C79894500362520 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEEBB1C7989D200362520 /* JSMeViewController.h */,
+				B36CEEBC1C7989D200362520 /* JSMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B36CEEA71C79894500362520 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B36CEEA81C79894500362520 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B36CEEA91C79894500362520 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEEAA1C79894500362520 /* Controller */,
+				B36CEEAB1C79894500362520 /* Model */,
+				B36CEEAC1C79894500362520 /* View */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		B36CEEAA1C79894500362520 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEEB51C7989B800362520 /* JSNewViewController.h */,
+				B36CEEB61C7989B800362520 /* JSNewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B36CEEAB1C79894500362520 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B36CEEAC1C79894500362520 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B36CEEAD1C79894500362520 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEEC31C79A5D600362520 /* Category */,
+				B36CEEC41C79A5D600362520 /* Lib */,
+				B35624061C78237D00D4D8C7 /* AppDelegate.h */,
+				B35624071C78237D00D4D8C7 /* AppDelegate.m */,
+				B36CEEC21C79990000362520 /* leoPch.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		B36CEEAE1C79894500362520 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEEAF1C79894500362520 /* Controller */,
+				B36CEEB01C79894500362520 /* Model */,
+				B36CEEB11C79894500362520 /* View */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		B36CEEAF1C79894500362520 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEE991C7886B700362520 /* JSTabBarController.h */,
+				B36CEE9A1C7886B700362520 /* JSTabBarController.m */,
+				B36CEEBE1C7996A200362520 /* JSTabBar.h */,
+				B36CEEBF1C7996A200362520 /* JSTabBar.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B36CEEB01C79894500362520 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B36CEEB11C79894500362520 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B36CEEC31C79A5D600362520 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B36CEEC51C79A60A00362520 /* UIView+JSExtension.h */,
+				B36CEEC61C79A60A00362520 /* UIView+JSExtension.m */,
+				B31FED8E1C7AF48700AEB98E /* UIBarButtonItem+JSExtension.h */,
+				B31FED8F1C7AF48700AEB98E /* UIBarButtonItem+JSExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		B36CEEC41C79A5D600362520 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +493,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B36CEE9B1C7886B700362520 /* JSTabBarController.m in Sources */,
+				B31FED901C7AF48700AEB98E /* UIBarButtonItem+JSExtension.m in Sources */,
+				B36CEEBA1C7989C700362520 /* JSFriendTrendsViewController.m in Sources */,
+				B36CEEBD1C7989D200362520 /* JSMeViewController.m in Sources */,
+				B36CEEB71C7989B800362520 /* JSNewViewController.m in Sources */,
 				B35624081C78237D00D4D8C7 /* AppDelegate.m in Sources */,
+				B36CEEC71C79A60A00362520 /* UIView+JSExtension.m in Sources */,
+				B36CEEB41C7989A600362520 /* JSEssenceViewController.m in Sources */,
+				B36CEEC01C7996A200362520 /* JSTabBar.m in Sources */,
 				B35624051C78237D00D4D8C7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,7 +622,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BaiSiBuDeJie/Classes/Other/leoPch.pch";
 				INFOPLIST_FILE = BaiSiBuDeJie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leo.BaiSiBuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -398,7 +636,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BaiSiBuDeJie/Classes/Other/leoPch.pch";
 				INFOPLIST_FILE = BaiSiBuDeJie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leo.BaiSiBuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
