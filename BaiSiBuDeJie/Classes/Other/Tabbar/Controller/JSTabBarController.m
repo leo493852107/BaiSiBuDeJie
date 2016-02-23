@@ -13,6 +13,7 @@
 #import "JSMeViewController.h"
 
 #import "JSTabBar.h"
+#import "JSNavigationController.h"
 
 @interface JSTabBarController ()
 
@@ -20,20 +21,9 @@
 
 @implementation JSTabBarController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // 设置 UITabBarItem 文字属性
-    [self setUpTitleTextAttributes];
-    
-    // 设置所有 TabBarItem
-    [self setUpAllTabBarItem];
-    
-    
-}
 
 #pragma mark - 设置 UITabBarItem 文字属性
-- (void)setUpTitleTextAttributes {
++ (void)initialize {
     // 通过 appearance 统一设置所有 UITabBarItem 的文字属性
     // 后面带有 UI_APPEARANCE_SELECTOR 的方法，都可以通过 appearance 对象来统一设置
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
@@ -48,6 +38,18 @@
     [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
 }
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    
+    // 设置所有 TabBarItem
+    [self setUpAllTabBarItem];
+    
+    
+}
+
+
 
 #pragma mark - 设置所有 TabBarItem
 - (void)setUpAllTabBarItem {
@@ -83,12 +85,11 @@
     // 设置图片样式为原始图片
     selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = selectedImage;
-//    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
-    // 包装一个导航控制器，添加导航控制器为 tabBarController 的子控制器
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     
+    // 包装一个导航控制器，添加导航控制器为 tabBarController 的子控制器
+    JSNavigationController *nav = [[JSNavigationController alloc] initWithRootViewController:vc];
     [self addChildViewController:nav];
+    
 }
 
 

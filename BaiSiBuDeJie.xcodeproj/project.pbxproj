@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B31FED901C7AF48700AEB98E /* UIBarButtonItem+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FED8F1C7AF48700AEB98E /* UIBarButtonItem+JSExtension.m */; };
+		502FD1A666E423236D86CC7A /* libPods-BaiSiBuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E103009AD7820AC5A3120EA /* libPods-BaiSiBuDeJie.a */; };
+		B31FEDE01C7C59DE00AEB98E /* JSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDB21C7C59DE00AEB98E /* JSEssenceViewController.m */; };
+		B31FEDE11C7C59DE00AEB98E /* JSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDB81C7C59DE00AEB98E /* JSFriendTrendsViewController.m */; };
+		B31FEDE21C7C59DE00AEB98E /* JSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FEDB91C7C59DE00AEB98E /* JSFriendTrendsViewController.xib */; };
+		B31FEDE31C7C59DE00AEB98E /* JSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDBF1C7C59DE00AEB98E /* JSMeViewController.m */; };
+		B31FEDE41C7C59DE00AEB98E /* JSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDC51C7C59DE00AEB98E /* JSNewViewController.m */; };
+		B31FEDE51C7C59DE00AEB98E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDCA1C7C59DE00AEB98E /* AppDelegate.m */; };
+		B31FEDE61C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDCD1C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m */; };
+		B31FEDE71C7C59DE00AEB98E /* UIView+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDCF1C7C59DE00AEB98E /* UIView+JSExtension.m */; };
+		B31FEDE81C7C59DE00AEB98E /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDD51C7C59DE00AEB98E /* JSNavigationController.m */; };
+		B31FEDE91C7C59DE00AEB98E /* JSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDDB1C7C59DE00AEB98E /* JSTabBar.m */; };
+		B31FEDEA1C7C59DE00AEB98E /* JSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDDD1C7C59DE00AEB98E /* JSTabBarController.m */; };
+		B31FEDF31C7C753200AEB98E /* JSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDF11C7C753200AEB98E /* JSRecommendViewController.m */; };
+		B31FEDF41C7C753200AEB98E /* JSRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FEDF21C7C753200AEB98E /* JSRecommendViewController.xib */; };
+		B31FEDFA1C7C824700AEB98E /* Log+Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDF91C7C824700AEB98E /* Log+Foundation.m */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
-		B35624081C78237D00D4D8C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624071C78237D00D4D8C7 /* AppDelegate.m */; };
 		B35624101C78237D00D4D8C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B356240F1C78237D00D4D8C7 /* Assets.xcassets */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
 		B35624291C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */; };
-		B36CEE9B1C7886B700362520 /* JSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEE9A1C7886B700362520 /* JSTabBarController.m */; };
-		B36CEEB41C7989A600362520 /* JSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEB31C7989A600362520 /* JSEssenceViewController.m */; };
-		B36CEEB71C7989B800362520 /* JSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEB61C7989B800362520 /* JSNewViewController.m */; };
-		B36CEEBA1C7989C700362520 /* JSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEB91C7989C700362520 /* JSFriendTrendsViewController.m */; };
-		B36CEEBD1C7989D200362520 /* JSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEBC1C7989D200362520 /* JSMeViewController.m */; };
-		B36CEEC01C7996A200362520 /* JSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEBF1C7996A200362520 /* JSTabBar.m */; };
-		B36CEEC71C79A60A00362520 /* UIView+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B36CEEC61C79A60A00362520 /* UIView+JSExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +46,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B31FED8E1C7AF48700AEB98E /* UIBarButtonItem+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+JSExtension.h"; sourceTree = "<group>"; };
-		B31FED8F1C7AF48700AEB98E /* UIBarButtonItem+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+JSExtension.m"; sourceTree = "<group>"; };
+		4E103009AD7820AC5A3120EA /* libPods-BaiSiBuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSiBuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31FEDB11C7C59DE00AEB98E /* JSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEssenceViewController.h; sourceTree = "<group>"; };
+		B31FEDB21C7C59DE00AEB98E /* JSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEssenceViewController.m; sourceTree = "<group>"; };
+		B31FEDB71C7C59DE00AEB98E /* JSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFriendTrendsViewController.h; sourceTree = "<group>"; };
+		B31FEDB81C7C59DE00AEB98E /* JSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFriendTrendsViewController.m; sourceTree = "<group>"; };
+		B31FEDB91C7C59DE00AEB98E /* JSFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		B31FEDBE1C7C59DE00AEB98E /* JSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMeViewController.h; sourceTree = "<group>"; };
+		B31FEDBF1C7C59DE00AEB98E /* JSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMeViewController.m; sourceTree = "<group>"; };
+		B31FEDC41C7C59DE00AEB98E /* JSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNewViewController.h; sourceTree = "<group>"; };
+		B31FEDC51C7C59DE00AEB98E /* JSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNewViewController.m; sourceTree = "<group>"; };
+		B31FEDC91C7C59DE00AEB98E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B31FEDCA1C7C59DE00AEB98E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B31FEDCC1C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+JSExtension.h"; sourceTree = "<group>"; };
+		B31FEDCD1C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+JSExtension.m"; sourceTree = "<group>"; };
+		B31FEDCE1C7C59DE00AEB98E /* UIView+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JSExtension.h"; sourceTree = "<group>"; };
+		B31FEDCF1C7C59DE00AEB98E /* UIView+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JSExtension.m"; sourceTree = "<group>"; };
+		B31FEDD01C7C59DE00AEB98E /* leoPch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leoPch.pch; sourceTree = "<group>"; };
+		B31FEDD41C7C59DE00AEB98E /* JSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationController.h; sourceTree = "<group>"; };
+		B31FEDD51C7C59DE00AEB98E /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
+		B31FEDDA1C7C59DE00AEB98E /* JSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBar.h; sourceTree = "<group>"; };
+		B31FEDDB1C7C59DE00AEB98E /* JSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBar.m; sourceTree = "<group>"; };
+		B31FEDDC1C7C59DE00AEB98E /* JSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBarController.h; sourceTree = "<group>"; };
+		B31FEDDD1C7C59DE00AEB98E /* JSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBarController.m; sourceTree = "<group>"; };
+		B31FEDF01C7C753200AEB98E /* JSRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendViewController.h; sourceTree = "<group>"; };
+		B31FEDF11C7C753200AEB98E /* JSRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendViewController.m; sourceTree = "<group>"; };
+		B31FEDF21C7C753200AEB98E /* JSRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRecommendViewController.xib; sourceTree = "<group>"; };
+		B31FEDF91C7C824700AEB98E /* Log+Foundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Log+Foundation.m"; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B35624061C78237D00D4D8C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
-		B35624071C78237D00D4D8C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		B356240F1C78237D00D4D8C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B35624141C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B35624191C78237D00D4D8C7 /* BaiSiBuDeJieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiSiBuDeJieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,21 +83,8 @@
 		B35624241C78237D00D4D8C7 /* BaiSiBuDeJieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiSiBuDeJieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaiSiBuDeJieUITests.m; sourceTree = "<group>"; };
 		B356242A1C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B36CEE991C7886B700362520 /* JSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSTabBarController.h; path = ../../../JSTabBarController.h; sourceTree = "<group>"; };
-		B36CEE9A1C7886B700362520 /* JSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSTabBarController.m; path = ../../../JSTabBarController.m; sourceTree = "<group>"; };
-		B36CEEB21C7989A600362520 /* JSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEssenceViewController.h; sourceTree = "<group>"; };
-		B36CEEB31C7989A600362520 /* JSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEssenceViewController.m; sourceTree = "<group>"; };
-		B36CEEB51C7989B800362520 /* JSNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNewViewController.h; sourceTree = "<group>"; };
-		B36CEEB61C7989B800362520 /* JSNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNewViewController.m; sourceTree = "<group>"; };
-		B36CEEB81C7989C700362520 /* JSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFriendTrendsViewController.h; sourceTree = "<group>"; };
-		B36CEEB91C7989C700362520 /* JSFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFriendTrendsViewController.m; sourceTree = "<group>"; };
-		B36CEEBB1C7989D200362520 /* JSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMeViewController.h; sourceTree = "<group>"; };
-		B36CEEBC1C7989D200362520 /* JSMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMeViewController.m; sourceTree = "<group>"; };
-		B36CEEBE1C7996A200362520 /* JSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBar.h; sourceTree = "<group>"; };
-		B36CEEBF1C7996A200362520 /* JSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBar.m; sourceTree = "<group>"; };
-		B36CEEC21C79990000362520 /* leoPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leoPch.pch; sourceTree = "<group>"; };
-		B36CEEC51C79A60A00362520 /* UIView+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JSExtension.h"; sourceTree = "<group>"; };
-		B36CEEC61C79A60A00362520 /* UIView+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JSExtension.m"; sourceTree = "<group>"; };
+		BF8FB0F75DE8322B2A8EE0F8 /* Pods-BaiSiBuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
+		E56D6226B2826712761A54DE /* Pods-BaiSiBuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502FD1A666E423236D86CC7A /* libPods-BaiSiBuDeJie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +113,272 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E9800C0ED4DB1FCCD9C51B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E103009AD7820AC5A3120EA /* libPods-BaiSiBuDeJie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DBC05ABAD5AE3FC7E15926F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF8FB0F75DE8322B2A8EE0F8 /* Pods-BaiSiBuDeJie.debug.xcconfig */,
+				E56D6226B2826712761A54DE /* Pods-BaiSiBuDeJie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B31FEDAE1C7C59DE00AEB98E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDAF1C7C59DE00AEB98E /* Essence */,
+				B31FEDB51C7C59DE00AEB98E /* FriendTrends */,
+				B31FEDBC1C7C59DE00AEB98E /* Me */,
+				B31FEDC21C7C59DE00AEB98E /* New */,
+				B31FEDC81C7C59DE00AEB98E /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B31FEDAF1C7C59DE00AEB98E /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDB01C7C59DE00AEB98E /* Controller */,
+				B31FEDB31C7C59DE00AEB98E /* Model */,
+				B31FEDB41C7C59DE00AEB98E /* View */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		B31FEDB01C7C59DE00AEB98E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDB11C7C59DE00AEB98E /* JSEssenceViewController.h */,
+				B31FEDB21C7C59DE00AEB98E /* JSEssenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B31FEDB31C7C59DE00AEB98E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B31FEDB41C7C59DE00AEB98E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B31FEDB51C7C59DE00AEB98E /* FriendTrends */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDB61C7C59DE00AEB98E /* Controller */,
+				B31FEDBA1C7C59DE00AEB98E /* Model */,
+				B31FEDBB1C7C59DE00AEB98E /* View */,
+			);
+			path = FriendTrends;
+			sourceTree = "<group>";
+		};
+		B31FEDB61C7C59DE00AEB98E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDB71C7C59DE00AEB98E /* JSFriendTrendsViewController.h */,
+				B31FEDB81C7C59DE00AEB98E /* JSFriendTrendsViewController.m */,
+				B31FEDB91C7C59DE00AEB98E /* JSFriendTrendsViewController.xib */,
+				B31FEDF01C7C753200AEB98E /* JSRecommendViewController.h */,
+				B31FEDF11C7C753200AEB98E /* JSRecommendViewController.m */,
+				B31FEDF21C7C753200AEB98E /* JSRecommendViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B31FEDBA1C7C59DE00AEB98E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B31FEDBB1C7C59DE00AEB98E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B31FEDBC1C7C59DE00AEB98E /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDBD1C7C59DE00AEB98E /* Controller */,
+				B31FEDC01C7C59DE00AEB98E /* Model */,
+				B31FEDC11C7C59DE00AEB98E /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		B31FEDBD1C7C59DE00AEB98E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDBE1C7C59DE00AEB98E /* JSMeViewController.h */,
+				B31FEDBF1C7C59DE00AEB98E /* JSMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B31FEDC01C7C59DE00AEB98E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B31FEDC11C7C59DE00AEB98E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B31FEDC21C7C59DE00AEB98E /* New */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDC31C7C59DE00AEB98E /* Controller */,
+				B31FEDC61C7C59DE00AEB98E /* Model */,
+				B31FEDC71C7C59DE00AEB98E /* View */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		B31FEDC31C7C59DE00AEB98E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDC41C7C59DE00AEB98E /* JSNewViewController.h */,
+				B31FEDC51C7C59DE00AEB98E /* JSNewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B31FEDC61C7C59DE00AEB98E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B31FEDC71C7C59DE00AEB98E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B31FEDC81C7C59DE00AEB98E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDCB1C7C59DE00AEB98E /* Category */,
+				B31FEDD11C7C59DE00AEB98E /* Lib */,
+				B31FEDD21C7C59DE00AEB98E /* Navigation */,
+				B31FEDD81C7C59DE00AEB98E /* Tabbar */,
+				B31FEDC91C7C59DE00AEB98E /* AppDelegate.h */,
+				B31FEDCA1C7C59DE00AEB98E /* AppDelegate.m */,
+				B31FEDD01C7C59DE00AEB98E /* leoPch.pch */,
+				B31FEDF91C7C824700AEB98E /* Log+Foundation.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		B31FEDCB1C7C59DE00AEB98E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDCC1C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.h */,
+				B31FEDCD1C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m */,
+				B31FEDCE1C7C59DE00AEB98E /* UIView+JSExtension.h */,
+				B31FEDCF1C7C59DE00AEB98E /* UIView+JSExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		B31FEDD11C7C59DE00AEB98E /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		B31FEDD21C7C59DE00AEB98E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDD31C7C59DE00AEB98E /* Controller */,
+				B31FEDD61C7C59DE00AEB98E /* Model */,
+				B31FEDD71C7C59DE00AEB98E /* View */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		B31FEDD31C7C59DE00AEB98E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDD41C7C59DE00AEB98E /* JSNavigationController.h */,
+				B31FEDD51C7C59DE00AEB98E /* JSNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B31FEDD61C7C59DE00AEB98E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B31FEDD71C7C59DE00AEB98E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B31FEDD81C7C59DE00AEB98E /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDD91C7C59DE00AEB98E /* Controller */,
+				B31FEDDE1C7C59DE00AEB98E /* Model */,
+				B31FEDDF1C7C59DE00AEB98E /* View */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		B31FEDD91C7C59DE00AEB98E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B31FEDDA1C7C59DE00AEB98E /* JSTabBar.h */,
+				B31FEDDB1C7C59DE00AEB98E /* JSTabBar.m */,
+				B31FEDDC1C7C59DE00AEB98E /* JSTabBarController.h */,
+				B31FEDDD1C7C59DE00AEB98E /* JSTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B31FEDDE1C7C59DE00AEB98E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B31FEDDF1C7C59DE00AEB98E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B35623F71C78237D00D4D8C7 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +386,8 @@
 				B356241C1C78237D00D4D8C7 /* BaiSiBuDeJieTests */,
 				B35624271C78237D00D4D8C7 /* BaiSiBuDeJieUITests */,
 				B35624011C78237D00D4D8C7 /* Products */,
+				7DBC05ABAD5AE3FC7E15926F /* Pods */,
+				4E9800C0ED4DB1FCCD9C51B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,7 +404,7 @@
 		B35624021C78237D00D4D8C7 /* BaiSiBuDeJie */ = {
 			isa = PBXGroup;
 			children = (
-				B36CEE9C1C79894500362520 /* Classes */,
+				B31FEDAE1C7C59DE00AEB98E /* Classes */,
 				B35624031C78237D00D4D8C7 /* Supporting Files */,
 			);
 			path = BaiSiBuDeJie;
@@ -153,216 +438,6 @@
 			path = BaiSiBuDeJieUITests;
 			sourceTree = "<group>";
 		};
-		B36CEE9C1C79894500362520 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEE9D1C79894500362520 /* Essence */,
-				B36CEEA91C79894500362520 /* New */,
-				B36CEEA11C79894500362520 /* FriendTrends */,
-				B36CEEA51C79894500362520 /* Me */,
-				B36CEEAD1C79894500362520 /* Other */,
-				B36CEEAE1C79894500362520 /* Tabbar */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		B36CEE9D1C79894500362520 /* Essence */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEE9E1C79894500362520 /* Controller */,
-				B36CEE9F1C79894500362520 /* Model */,
-				B36CEEA01C79894500362520 /* View */,
-			);
-			path = Essence;
-			sourceTree = "<group>";
-		};
-		B36CEE9E1C79894500362520 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEEB21C7989A600362520 /* JSEssenceViewController.h */,
-				B36CEEB31C7989A600362520 /* JSEssenceViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		B36CEE9F1C79894500362520 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B36CEEA01C79894500362520 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B36CEEA11C79894500362520 /* FriendTrends */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEEA21C79894500362520 /* Controller */,
-				B36CEEA31C79894500362520 /* Model */,
-				B36CEEA41C79894500362520 /* View */,
-			);
-			path = FriendTrends;
-			sourceTree = "<group>";
-		};
-		B36CEEA21C79894500362520 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEEB81C7989C700362520 /* JSFriendTrendsViewController.h */,
-				B36CEEB91C7989C700362520 /* JSFriendTrendsViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		B36CEEA31C79894500362520 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B36CEEA41C79894500362520 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B36CEEA51C79894500362520 /* Me */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEEA61C79894500362520 /* Controller */,
-				B36CEEA71C79894500362520 /* Model */,
-				B36CEEA81C79894500362520 /* View */,
-			);
-			path = Me;
-			sourceTree = "<group>";
-		};
-		B36CEEA61C79894500362520 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEEBB1C7989D200362520 /* JSMeViewController.h */,
-				B36CEEBC1C7989D200362520 /* JSMeViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		B36CEEA71C79894500362520 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B36CEEA81C79894500362520 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B36CEEA91C79894500362520 /* New */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEEAA1C79894500362520 /* Controller */,
-				B36CEEAB1C79894500362520 /* Model */,
-				B36CEEAC1C79894500362520 /* View */,
-			);
-			path = New;
-			sourceTree = "<group>";
-		};
-		B36CEEAA1C79894500362520 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEEB51C7989B800362520 /* JSNewViewController.h */,
-				B36CEEB61C7989B800362520 /* JSNewViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		B36CEEAB1C79894500362520 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B36CEEAC1C79894500362520 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B36CEEAD1C79894500362520 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEEC31C79A5D600362520 /* Category */,
-				B36CEEC41C79A5D600362520 /* Lib */,
-				B35624061C78237D00D4D8C7 /* AppDelegate.h */,
-				B35624071C78237D00D4D8C7 /* AppDelegate.m */,
-				B36CEEC21C79990000362520 /* leoPch.pch */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		B36CEEAE1C79894500362520 /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEEAF1C79894500362520 /* Controller */,
-				B36CEEB01C79894500362520 /* Model */,
-				B36CEEB11C79894500362520 /* View */,
-			);
-			path = Tabbar;
-			sourceTree = "<group>";
-		};
-		B36CEEAF1C79894500362520 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEE991C7886B700362520 /* JSTabBarController.h */,
-				B36CEE9A1C7886B700362520 /* JSTabBarController.m */,
-				B36CEEBE1C7996A200362520 /* JSTabBar.h */,
-				B36CEEBF1C7996A200362520 /* JSTabBar.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		B36CEEB01C79894500362520 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B36CEEB11C79894500362520 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B36CEEC31C79A5D600362520 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				B36CEEC51C79A60A00362520 /* UIView+JSExtension.h */,
-				B36CEEC61C79A60A00362520 /* UIView+JSExtension.m */,
-				B31FED8E1C7AF48700AEB98E /* UIBarButtonItem+JSExtension.h */,
-				B31FED8F1C7AF48700AEB98E /* UIBarButtonItem+JSExtension.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		B36CEEC41C79A5D600362520 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -370,9 +445,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B356242D1C78237D00D4D8C7 /* Build configuration list for PBXNativeTarget "BaiSiBuDeJie" */;
 			buildPhases = (
+				BFEFDFD5447CF5C58435EEF9 /* Check Pods Manifest.lock */,
 				B35623FC1C78237D00D4D8C7 /* Sources */,
 				B35623FD1C78237D00D4D8C7 /* Frameworks */,
 				B35623FE1C78237D00D4D8C7 /* Resources */,
+				57EB832278C67AC3CA201A4A /* Embed Pods Frameworks */,
+				4B45D364548D58169D610762 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -467,7 +545,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31FEDE21C7C59DE00AEB98E /* JSFriendTrendsViewController.xib in Resources */,
 				B35624101C78237D00D4D8C7 /* Assets.xcassets in Resources */,
+				B31FEDF41C7C753200AEB98E /* JSRecommendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,21 +567,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4B45D364548D58169D610762 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57EB832278C67AC3CA201A4A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFEFDFD5447CF5C58435EEF9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B35623FC1C78237D00D4D8C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B36CEE9B1C7886B700362520 /* JSTabBarController.m in Sources */,
-				B31FED901C7AF48700AEB98E /* UIBarButtonItem+JSExtension.m in Sources */,
-				B36CEEBA1C7989C700362520 /* JSFriendTrendsViewController.m in Sources */,
-				B36CEEBD1C7989D200362520 /* JSMeViewController.m in Sources */,
-				B36CEEB71C7989B800362520 /* JSNewViewController.m in Sources */,
-				B35624081C78237D00D4D8C7 /* AppDelegate.m in Sources */,
-				B36CEEC71C79A60A00362520 /* UIView+JSExtension.m in Sources */,
-				B36CEEB41C7989A600362520 /* JSEssenceViewController.m in Sources */,
-				B36CEEC01C7996A200362520 /* JSTabBar.m in Sources */,
+				B31FEDE01C7C59DE00AEB98E /* JSEssenceViewController.m in Sources */,
+				B31FEDEA1C7C59DE00AEB98E /* JSTabBarController.m in Sources */,
+				B31FEDE41C7C59DE00AEB98E /* JSNewViewController.m in Sources */,
+				B31FEDE61C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m in Sources */,
+				B31FEDF31C7C753200AEB98E /* JSRecommendViewController.m in Sources */,
+				B31FEDE51C7C59DE00AEB98E /* AppDelegate.m in Sources */,
+				B31FEDE31C7C59DE00AEB98E /* JSMeViewController.m in Sources */,
+				B31FEDFA1C7C824700AEB98E /* Log+Foundation.m in Sources */,
+				B31FEDE71C7C59DE00AEB98E /* UIView+JSExtension.m in Sources */,
+				B31FEDE91C7C59DE00AEB98E /* JSTabBar.m in Sources */,
+				B31FEDE11C7C59DE00AEB98E /* JSFriendTrendsViewController.m in Sources */,
 				B35624051C78237D00D4D8C7 /* main.m in Sources */,
+				B31FEDE81C7C59DE00AEB98E /* JSNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +750,7 @@
 		};
 		B356242E1C78237D00D4D8C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF8FB0F75DE8322B2A8EE0F8 /* Pods-BaiSiBuDeJie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -633,6 +765,7 @@
 		};
 		B356242F1C78237D00D4D8C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E56D6226B2826712761A54DE /* Pods-BaiSiBuDeJie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

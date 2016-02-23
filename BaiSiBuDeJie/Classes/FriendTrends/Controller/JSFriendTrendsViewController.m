@@ -7,6 +7,7 @@
 //
 
 #import "JSFriendTrendsViewController.h"
+#import "JSRecommendViewController.h"
 
 @interface JSFriendTrendsViewController ()
 
@@ -26,10 +27,12 @@
     // 设置背景色
     self.view.backgroundColor = JSGlobalBackGroundColor;
     
+    
 }
 
 - (void)friendsClick {
-    JSLogFunc;
+    JSRecommendViewController *vc = [[JSRecommendViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
