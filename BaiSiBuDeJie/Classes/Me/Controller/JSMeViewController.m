@@ -20,11 +20,14 @@
     // 设置导航栏标题
     self.navigationItem.title = @"我的";
     
-    // // 设置导航栏右边的按钮
+    // 设置导航栏右边的按钮
     UIBarButtonItem *settingButton = [UIBarButtonItem initWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
     UIBarButtonItem *moonButton = [UIBarButtonItem initWithImage:@"mine-moon-icon" highImage:@"mine-moon-icon-click" target:self action:@selector(moonClick)];
     
     self.navigationItem.rightBarButtonItems = @[settingButton, moonButton];
+    
+    // 设置背景色
+    self.view.backgroundColor = JSGlobalBackGroundColor;
     
 }
 

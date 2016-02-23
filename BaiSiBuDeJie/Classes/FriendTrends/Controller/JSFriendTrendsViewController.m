@@ -23,7 +23,8 @@
     // 设置导航栏左边的按钮
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem initWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(friendsClick)];
 
-    
+    // 设置背景色
+    self.view.backgroundColor = JSGlobalBackGroundColor;
     
 }
 
