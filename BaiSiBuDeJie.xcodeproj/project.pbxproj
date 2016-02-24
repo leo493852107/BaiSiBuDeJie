@@ -22,6 +22,9 @@
 		B31FEDF31C7C753200AEB98E /* JSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDF11C7C753200AEB98E /* JSRecommendViewController.m */; };
 		B31FEDF41C7C753200AEB98E /* JSRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FEDF21C7C753200AEB98E /* JSRecommendViewController.xib */; };
 		B31FEDFA1C7C824700AEB98E /* Log+Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDF91C7C824700AEB98E /* Log+Foundation.m */; };
+		B31FEDFD1C7C90A000AEB98E /* JSRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDFC1C7C90A000AEB98E /* JSRecommendCategory.m */; };
+		B31FEE011C7C92CC00AEB98E /* JSRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDFF1C7C92CC00AEB98E /* JSRecommendCategoryCell.m */; };
+		B31FEE021C7C92CC00AEB98E /* JSRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FEE001C7C92CC00AEB98E /* JSRecommendCategoryCell.xib */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B35624101C78237D00D4D8C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B356240F1C78237D00D4D8C7 /* Assets.xcassets */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
@@ -73,6 +76,11 @@
 		B31FEDF11C7C753200AEB98E /* JSRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendViewController.m; sourceTree = "<group>"; };
 		B31FEDF21C7C753200AEB98E /* JSRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRecommendViewController.xib; sourceTree = "<group>"; };
 		B31FEDF91C7C824700AEB98E /* Log+Foundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Log+Foundation.m"; sourceTree = "<group>"; };
+		B31FEDFB1C7C90A000AEB98E /* JSRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendCategory.h; sourceTree = "<group>"; };
+		B31FEDFC1C7C90A000AEB98E /* JSRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendCategory.m; sourceTree = "<group>"; };
+		B31FEDFE1C7C92CC00AEB98E /* JSRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendCategoryCell.h; sourceTree = "<group>"; };
+		B31FEDFF1C7C92CC00AEB98E /* JSRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendCategoryCell.m; sourceTree = "<group>"; };
+		B31FEE001C7C92CC00AEB98E /* JSRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRecommendCategoryCell.xib; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B356240F1C78237D00D4D8C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -201,6 +209,8 @@
 		B31FEDBA1C7C59DE00AEB98E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B31FEDFB1C7C90A000AEB98E /* JSRecommendCategory.h */,
+				B31FEDFC1C7C90A000AEB98E /* JSRecommendCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +218,9 @@
 		B31FEDBB1C7C59DE00AEB98E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B31FEDFE1C7C92CC00AEB98E /* JSRecommendCategoryCell.h */,
+				B31FEDFF1C7C92CC00AEB98E /* JSRecommendCategoryCell.m */,
+				B31FEE001C7C92CC00AEB98E /* JSRecommendCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -546,6 +559,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31FEDE21C7C59DE00AEB98E /* JSFriendTrendsViewController.xib in Resources */,
+				B31FEE021C7C92CC00AEB98E /* JSRecommendCategoryCell.xib in Resources */,
 				B35624101C78237D00D4D8C7 /* Assets.xcassets in Resources */,
 				B31FEDF41C7C753200AEB98E /* JSRecommendViewController.xib in Resources */,
 			);
@@ -622,6 +636,7 @@
 			files = (
 				B31FEDE01C7C59DE00AEB98E /* JSEssenceViewController.m in Sources */,
 				B31FEDEA1C7C59DE00AEB98E /* JSTabBarController.m in Sources */,
+				B31FEE011C7C92CC00AEB98E /* JSRecommendCategoryCell.m in Sources */,
 				B31FEDE41C7C59DE00AEB98E /* JSNewViewController.m in Sources */,
 				B31FEDE61C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m in Sources */,
 				B31FEDF31C7C753200AEB98E /* JSRecommendViewController.m in Sources */,
@@ -629,6 +644,7 @@
 				B31FEDE31C7C59DE00AEB98E /* JSMeViewController.m in Sources */,
 				B31FEDFA1C7C824700AEB98E /* Log+Foundation.m in Sources */,
 				B31FEDE71C7C59DE00AEB98E /* UIView+JSExtension.m in Sources */,
+				B31FEDFD1C7C90A000AEB98E /* JSRecommendCategory.m in Sources */,
 				B31FEDE91C7C59DE00AEB98E /* JSTabBar.m in Sources */,
 				B31FEDE11C7C59DE00AEB98E /* JSFriendTrendsViewController.m in Sources */,
 				B35624051C78237D00D4D8C7 /* main.m in Sources */,

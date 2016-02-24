@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JSRecommendViewController">
             <connections>
+                <outlet property="categoryTableView" destination="n7G-QE-1c7" id="QF6-8b-s1z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +15,25 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n7G-QE-1c7">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="YTc-vx-7c9"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zq4-lW-C79"/>
+                        <outlet property="delegate" destination="-1" id="uT3-Us-kcI"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="n7G-QE-1c7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OwG-y1-VqA"/>
+                <constraint firstItem="n7G-QE-1c7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PZu-hJ-UQu"/>
+                <constraint firstAttribute="bottom" secondItem="n7G-QE-1c7" secondAttribute="bottom" id="RoJ-Mh-IOr"/>
+            </constraints>
         </view>
     </objects>
 </document>
