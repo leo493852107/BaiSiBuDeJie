@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class JSRecommendUser;
 @interface JSRecommendUserCell : UITableViewCell
+
+@property (nonatomic, strong) JSRecommendUser *user;
 
 @end

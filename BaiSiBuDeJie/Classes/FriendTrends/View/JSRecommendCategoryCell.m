@@ -25,12 +25,7 @@
 - (void)awakeFromNib {
     self.backgroundColor = JSRGBColor(244, 244, 244);
     self.selectedIndicator.backgroundColor = JSRGBColor(219, 21, 26);
-//    self.textLabel.textColor = JSRGBColor(78, 78, 78);
-//    self.textLabel.highlightedTextColor = JSRGBColor(219, 21, 26);
     
-//    UIView *bg = [[UIView alloc] init];
-//    bg.backgroundColor = [UIColor clearColor];
-//    self.selectedBackgroundView = bg;
 
 }
 
@@ -42,6 +37,7 @@
     
 }
 
+#pragma mark - 在这个方法中监听cell的选中和取消选中
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     

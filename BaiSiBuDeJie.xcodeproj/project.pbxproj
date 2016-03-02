@@ -25,6 +25,9 @@
 		B31FEDFD1C7C90A000AEB98E /* JSRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDFC1C7C90A000AEB98E /* JSRecommendCategory.m */; };
 		B31FEE011C7C92CC00AEB98E /* JSRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDFF1C7C92CC00AEB98E /* JSRecommendCategoryCell.m */; };
 		B31FEE021C7C92CC00AEB98E /* JSRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FEE001C7C92CC00AEB98E /* JSRecommendCategoryCell.xib */; };
+		B31FEE061C7D8DE400AEB98E /* JSRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEE041C7D8DE400AEB98E /* JSRecommendUserCell.m */; };
+		B31FEE071C7D8DE400AEB98E /* JSRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FEE051C7D8DE400AEB98E /* JSRecommendUserCell.xib */; };
+		B31FEE0A1C7D94F200AEB98E /* JSRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEE091C7D94F200AEB98E /* JSRecommendUser.m */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B35624101C78237D00D4D8C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B356240F1C78237D00D4D8C7 /* Assets.xcassets */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
@@ -81,6 +84,11 @@
 		B31FEDFE1C7C92CC00AEB98E /* JSRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendCategoryCell.h; sourceTree = "<group>"; };
 		B31FEDFF1C7C92CC00AEB98E /* JSRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendCategoryCell.m; sourceTree = "<group>"; };
 		B31FEE001C7C92CC00AEB98E /* JSRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		B31FEE031C7D8DE400AEB98E /* JSRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendUserCell.h; sourceTree = "<group>"; };
+		B31FEE041C7D8DE400AEB98E /* JSRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendUserCell.m; sourceTree = "<group>"; };
+		B31FEE051C7D8DE400AEB98E /* JSRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRecommendUserCell.xib; sourceTree = "<group>"; };
+		B31FEE081C7D94F200AEB98E /* JSRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendUser.h; sourceTree = "<group>"; };
+		B31FEE091C7D94F200AEB98E /* JSRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendUser.m; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B356240F1C78237D00D4D8C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -211,6 +219,8 @@
 			children = (
 				B31FEDFB1C7C90A000AEB98E /* JSRecommendCategory.h */,
 				B31FEDFC1C7C90A000AEB98E /* JSRecommendCategory.m */,
+				B31FEE081C7D94F200AEB98E /* JSRecommendUser.h */,
+				B31FEE091C7D94F200AEB98E /* JSRecommendUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +231,9 @@
 				B31FEDFE1C7C92CC00AEB98E /* JSRecommendCategoryCell.h */,
 				B31FEDFF1C7C92CC00AEB98E /* JSRecommendCategoryCell.m */,
 				B31FEE001C7C92CC00AEB98E /* JSRecommendCategoryCell.xib */,
+				B31FEE031C7D8DE400AEB98E /* JSRecommendUserCell.h */,
+				B31FEE041C7D8DE400AEB98E /* JSRecommendUserCell.m */,
+				B31FEE051C7D8DE400AEB98E /* JSRecommendUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -562,6 +575,7 @@
 				B31FEE021C7C92CC00AEB98E /* JSRecommendCategoryCell.xib in Resources */,
 				B35624101C78237D00D4D8C7 /* Assets.xcassets in Resources */,
 				B31FEDF41C7C753200AEB98E /* JSRecommendViewController.xib in Resources */,
+				B31FEE071C7D8DE400AEB98E /* JSRecommendUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,9 +654,11 @@
 				B31FEDE41C7C59DE00AEB98E /* JSNewViewController.m in Sources */,
 				B31FEDE61C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m in Sources */,
 				B31FEDF31C7C753200AEB98E /* JSRecommendViewController.m in Sources */,
+				B31FEE061C7D8DE400AEB98E /* JSRecommendUserCell.m in Sources */,
 				B31FEDE51C7C59DE00AEB98E /* AppDelegate.m in Sources */,
 				B31FEDE31C7C59DE00AEB98E /* JSMeViewController.m in Sources */,
 				B31FEDFA1C7C824700AEB98E /* Log+Foundation.m in Sources */,
+				B31FEE0A1C7D94F200AEB98E /* JSRecommendUser.m in Sources */,
 				B31FEDE71C7C59DE00AEB98E /* UIView+JSExtension.m in Sources */,
 				B31FEDFD1C7C90A000AEB98E /* JSRecommendCategory.m in Sources */,
 				B31FEDE91C7C59DE00AEB98E /* JSTabBar.m in Sources */,

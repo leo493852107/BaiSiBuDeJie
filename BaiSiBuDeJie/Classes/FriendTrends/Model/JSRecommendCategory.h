@@ -18,11 +18,32 @@
 /**
  *  总数
  */
-@property (nonatomic, copy) NSString *count;
+@property (nonatomic, assign) NSUInteger *count;
 
 /**
  *  名字
  */
 @property (nonatomic, copy) NSString *name;
+
+/**
+ *  总页数
+ */
+//@property (nonatomic, assign) NSUInteger total_page;
+
+/**
+ *  总数
+ */
+@property (nonatomic, assign) NSUInteger total;
+
+
+@property (nonatomic, assign) NSUInteger currentPage;
+
+
+
+
+/**
+ *  这个类别对应的用户数据
+ */
+@property (nonatomic, strong) NSMutableArray *users;
 
 @end
