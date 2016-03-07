@@ -28,6 +28,10 @@
 		B31FEE061C7D8DE400AEB98E /* JSRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEE041C7D8DE400AEB98E /* JSRecommendUserCell.m */; };
 		B31FEE071C7D8DE400AEB98E /* JSRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FEE051C7D8DE400AEB98E /* JSRecommendUserCell.xib */; };
 		B31FEE0A1C7D94F200AEB98E /* JSRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEE091C7D94F200AEB98E /* JSRecommendUser.m */; };
+		B31FF03D1C87028F00AEB98E /* JSRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FF03C1C87028F00AEB98E /* JSRecommendTagsViewController.m */; };
+		B31FF0401C87047D00AEB98E /* JSRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FF03F1C87047D00AEB98E /* JSRecommendTag.m */; };
+		B31FF0471C8705F700AEB98E /* JSRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FF0451C8705F700AEB98E /* JSRecommendTagCell.m */; };
+		B31FF0481C8705F700AEB98E /* JSRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FF0461C8705F700AEB98E /* JSRecommendTagCell.xib */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B35624101C78237D00D4D8C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B356240F1C78237D00D4D8C7 /* Assets.xcassets */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
@@ -89,6 +93,13 @@
 		B31FEE051C7D8DE400AEB98E /* JSRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRecommendUserCell.xib; sourceTree = "<group>"; };
 		B31FEE081C7D94F200AEB98E /* JSRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendUser.h; sourceTree = "<group>"; };
 		B31FEE091C7D94F200AEB98E /* JSRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendUser.m; sourceTree = "<group>"; };
+		B31FF03B1C87028F00AEB98E /* JSRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendTagsViewController.h; sourceTree = "<group>"; };
+		B31FF03C1C87028F00AEB98E /* JSRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendTagsViewController.m; sourceTree = "<group>"; };
+		B31FF03E1C87047D00AEB98E /* JSRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendTag.h; sourceTree = "<group>"; };
+		B31FF03F1C87047D00AEB98E /* JSRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendTag.m; sourceTree = "<group>"; };
+		B31FF0441C8705F700AEB98E /* JSRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendTagCell.h; sourceTree = "<group>"; };
+		B31FF0451C8705F700AEB98E /* JSRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendTagCell.m; sourceTree = "<group>"; };
+		B31FF0461C8705F700AEB98E /* JSRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRecommendTagCell.xib; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B356240F1C78237D00D4D8C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,6 +184,8 @@
 			children = (
 				B31FEDB11C7C59DE00AEB98E /* JSEssenceViewController.h */,
 				B31FEDB21C7C59DE00AEB98E /* JSEssenceViewController.m */,
+				B31FF03B1C87028F00AEB98E /* JSRecommendTagsViewController.h */,
+				B31FF03C1C87028F00AEB98E /* JSRecommendTagsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,6 +193,8 @@
 		B31FEDB31C7C59DE00AEB98E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B31FF03E1C87047D00AEB98E /* JSRecommendTag.h */,
+				B31FF03F1C87047D00AEB98E /* JSRecommendTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +202,9 @@
 		B31FEDB41C7C59DE00AEB98E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B31FF0441C8705F700AEB98E /* JSRecommendTagCell.h */,
+				B31FF0451C8705F700AEB98E /* JSRecommendTagCell.m */,
+				B31FF0461C8705F700AEB98E /* JSRecommendTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -575,6 +593,7 @@
 				B31FEE021C7C92CC00AEB98E /* JSRecommendCategoryCell.xib in Resources */,
 				B35624101C78237D00D4D8C7 /* Assets.xcassets in Resources */,
 				B31FEDF41C7C753200AEB98E /* JSRecommendViewController.xib in Resources */,
+				B31FF0481C8705F700AEB98E /* JSRecommendTagCell.xib in Resources */,
 				B31FEE071C7D8DE400AEB98E /* JSRecommendUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,9 +680,12 @@
 				B31FEE0A1C7D94F200AEB98E /* JSRecommendUser.m in Sources */,
 				B31FEDE71C7C59DE00AEB98E /* UIView+JSExtension.m in Sources */,
 				B31FEDFD1C7C90A000AEB98E /* JSRecommendCategory.m in Sources */,
+				B31FF03D1C87028F00AEB98E /* JSRecommendTagsViewController.m in Sources */,
+				B31FF0401C87047D00AEB98E /* JSRecommendTag.m in Sources */,
 				B31FEDE91C7C59DE00AEB98E /* JSTabBar.m in Sources */,
 				B31FEDE11C7C59DE00AEB98E /* JSFriendTrendsViewController.m in Sources */,
 				B35624051C78237D00D4D8C7 /* main.m in Sources */,
+				B31FF0471C8705F700AEB98E /* JSRecommendTagCell.m in Sources */,
 				B31FEDE81C7C59DE00AEB98E /* JSNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

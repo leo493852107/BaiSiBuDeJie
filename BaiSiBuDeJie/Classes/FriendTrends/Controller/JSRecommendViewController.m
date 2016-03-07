@@ -105,7 +105,7 @@ static NSString * const JSUserID = @"user";
         
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+        JSLog(@"%@", error);
         // 显示失败信息
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
         

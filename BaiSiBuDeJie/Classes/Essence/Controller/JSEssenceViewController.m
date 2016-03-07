@@ -7,6 +7,7 @@
 //
 
 #import "JSEssenceViewController.h"
+#import "JSRecommendTagsViewController.h"
 
 @interface JSEssenceViewController ()
 
@@ -31,7 +32,9 @@
 
 #pragma mark - 点击 MainTagSubIcon
 - (void)tagClick {
-    JSLog(@"%s", __func__);
+
+    JSRecommendTagsViewController *tags = [[JSRecommendTagsViewController alloc] init];
+    [self.navigationController pushViewController:tags animated:YES];
 }
 
 
