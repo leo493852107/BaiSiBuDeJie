@@ -9,12 +9,16 @@
 #import "JSLoginRegisterViewController.h"
 
 @interface JSLoginRegisterViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *phoneField;
-@property (weak, nonatomic) IBOutlet UITextField *pwdField;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginViewLeftMargin;
 
 @end
 
 @implementation JSLoginRegisterViewController
+
+- (IBAction)back {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,6 +45,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)showLoginOrRegister:(UIButton *)button {
+    
+    // 退出键盘
+    [self.view endEditing:YES];
+    
+    if (self.loginViewLeftMargin.constant == 0) {
+        // 显示注册
+        self.loginViewLeftMargin.constant = - self.view.width;
+        button.selected = YES;
+//        [button setTitle:@"已有账号?" forState:UIControlStateNormal];
+    } else {
+        // 显示登录
+        self.loginViewLeftMargin.constant = 0;
+        button.selected = NO;
+//        [button setTitle:@"注册" forState:UIControlStateNormal];
+    }
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+    
+}
 
 /**
  *  让当前控制器对应的状态栏是白色

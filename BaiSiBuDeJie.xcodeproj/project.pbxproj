@@ -37,6 +37,8 @@
 		B334115E1C8D904400067002 /* JSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B334115D1C8D904400067002 /* JSVerticalButton.m */; };
 		B33411601C8D91F600067002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B334115F1C8D91F600067002 /* Assets.xcassets */; };
 		B33411631C8DA87900067002 /* JSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411621C8DA87900067002 /* JSTextField.m */; };
+		B334116A1C8EF05300067002 /* JSPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411691C8EF05300067002 /* JSPushGuideView.m */; };
+		B334116C1C8EF06200067002 /* JSPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B334116B1C8EF06200067002 /* JSPushGuideView.xib */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
 		B35624291C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */; };
@@ -112,6 +114,9 @@
 		B334115F1C8D91F600067002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B33411611C8DA87900067002 /* JSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTextField.h; sourceTree = "<group>"; };
 		B33411621C8DA87900067002 /* JSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTextField.m; sourceTree = "<group>"; };
+		B33411681C8EF05300067002 /* JSPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPushGuideView.h; sourceTree = "<group>"; };
+		B33411691C8EF05300067002 /* JSPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPushGuideView.m; sourceTree = "<group>"; };
+		B334116B1C8EF06200067002 /* JSPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSPushGuideView.xib; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B35624141C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -343,6 +348,7 @@
 		B31FEDC81C7C59DE00AEB98E /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B33411641C8EF00800067002 /* PushGuide */,
 				B31FEDCB1C7C59DE00AEB98E /* Category */,
 				B31FEDD11C7C59DE00AEB98E /* Lib */,
 				B31FEDD21C7C59DE00AEB98E /* Navigation */,
@@ -439,6 +445,16 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B33411641C8EF00800067002 /* PushGuide */ = {
+			isa = PBXGroup;
+			children = (
+				B33411681C8EF05300067002 /* JSPushGuideView.h */,
+				B33411691C8EF05300067002 /* JSPushGuideView.m */,
+				B334116B1C8EF06200067002 /* JSPushGuideView.xib */,
+			);
+			path = PushGuide;
 			sourceTree = "<group>";
 		};
 		B35623F71C78237D00D4D8C7 = {
@@ -609,6 +625,7 @@
 			files = (
 				B334115B1C8D416000067002 /* JSLoginRegisterViewController.xib in Resources */,
 				B31FEDE21C7C59DE00AEB98E /* JSFriendTrendsViewController.xib in Resources */,
+				B334116C1C8EF06200067002 /* JSPushGuideView.xib in Resources */,
 				B31FEE021C7C92CC00AEB98E /* JSRecommendCategoryCell.xib in Resources */,
 				B31FEDF41C7C753200AEB98E /* JSRecommendViewController.xib in Resources */,
 				B33411601C8D91F600067002 /* Assets.xcassets in Resources */,
@@ -688,6 +705,7 @@
 			files = (
 				B31FEDE01C7C59DE00AEB98E /* JSEssenceViewController.m in Sources */,
 				B31FEDEA1C7C59DE00AEB98E /* JSTabBarController.m in Sources */,
+				B334116A1C8EF05300067002 /* JSPushGuideView.m in Sources */,
 				B31FEE011C7C92CC00AEB98E /* JSRecommendCategoryCell.m in Sources */,
 				B31FEDE41C7C59DE00AEB98E /* JSNewViewController.m in Sources */,
 				B31FEDE61C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m in Sources */,
