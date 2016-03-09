@@ -41,11 +41,17 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell.backgroundColor = [UIColor blueColor];
     }
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@----%zd", [self class], indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    JSLog(@"%@", NSStringFromUIEdgeInsets(tableView.contentInset));
+    JSLog(@"%@", NSStringFromCGRect(tableView.frame));
 }
 
 

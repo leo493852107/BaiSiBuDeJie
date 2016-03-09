@@ -206,11 +206,16 @@
     // 取出子控制器
     UITableViewController *vc = self.childViewControllers[index];
     vc.view.x = scrollView.contentOffset.x;
+    // 设置控制器view的y值为0（默认20）
+    vc.view.y = 0;
+    // 设置控制器view的height为整个屏幕的高度（默认是比屏幕高度少个20）
+    vc.view.height = scrollView.height;
     // 设置内边距
     CGFloat bottom = self.tabBarController.tabBar.height;
     CGFloat top = CGRectGetMaxY(self.titlesView.frame);
     vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
-    
+    // 设置滚动条内边距, 解决 tableview 滚动条被挡
+    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
     [scrollView addSubview:vc.view];
     
 }
