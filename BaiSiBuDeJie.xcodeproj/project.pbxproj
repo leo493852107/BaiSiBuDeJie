@@ -39,6 +39,11 @@
 		B33411631C8DA87900067002 /* JSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411621C8DA87900067002 /* JSTextField.m */; };
 		B334116A1C8EF05300067002 /* JSPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411691C8EF05300067002 /* JSPushGuideView.m */; };
 		B334116C1C8EF06200067002 /* JSPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B334116B1C8EF06200067002 /* JSPushGuideView.xib */; };
+		B334116F1C90513B00067002 /* JSAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B334116E1C90513B00067002 /* JSAllViewController.m */; };
+		B33411721C90514C00067002 /* JSVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411711C90514C00067002 /* JSVideoViewController.m */; };
+		B33411751C90515A00067002 /* JSVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411741C90515A00067002 /* JSVoiceViewController.m */; };
+		B33411781C90516D00067002 /* JSPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411771C90516D00067002 /* JSPictureViewController.m */; };
+		B334117B1C90517D00067002 /* JSWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B334117A1C90517D00067002 /* JSWordViewController.m */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
 		B35624291C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */; };
@@ -117,6 +122,16 @@
 		B33411681C8EF05300067002 /* JSPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPushGuideView.h; sourceTree = "<group>"; };
 		B33411691C8EF05300067002 /* JSPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPushGuideView.m; sourceTree = "<group>"; };
 		B334116B1C8EF06200067002 /* JSPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSPushGuideView.xib; sourceTree = "<group>"; };
+		B334116D1C90513B00067002 /* JSAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAllViewController.h; sourceTree = "<group>"; };
+		B334116E1C90513B00067002 /* JSAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAllViewController.m; sourceTree = "<group>"; };
+		B33411701C90514C00067002 /* JSVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSVideoViewController.h; sourceTree = "<group>"; };
+		B33411711C90514C00067002 /* JSVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSVideoViewController.m; sourceTree = "<group>"; };
+		B33411731C90515A00067002 /* JSVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSVoiceViewController.h; sourceTree = "<group>"; };
+		B33411741C90515A00067002 /* JSVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSVoiceViewController.m; sourceTree = "<group>"; };
+		B33411761C90516D00067002 /* JSPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPictureViewController.h; sourceTree = "<group>"; };
+		B33411771C90516D00067002 /* JSPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPictureViewController.m; sourceTree = "<group>"; };
+		B33411791C90517D00067002 /* JSWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWordViewController.h; sourceTree = "<group>"; };
+		B334117A1C90517D00067002 /* JSWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWordViewController.m; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B35624141C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -202,6 +217,16 @@
 				B31FEDB21C7C59DE00AEB98E /* JSEssenceViewController.m */,
 				B31FF03B1C87028F00AEB98E /* JSRecommendTagsViewController.h */,
 				B31FF03C1C87028F00AEB98E /* JSRecommendTagsViewController.m */,
+				B334116D1C90513B00067002 /* JSAllViewController.h */,
+				B334116E1C90513B00067002 /* JSAllViewController.m */,
+				B33411701C90514C00067002 /* JSVideoViewController.h */,
+				B33411711C90514C00067002 /* JSVideoViewController.m */,
+				B33411731C90515A00067002 /* JSVoiceViewController.h */,
+				B33411741C90515A00067002 /* JSVoiceViewController.m */,
+				B33411761C90516D00067002 /* JSPictureViewController.h */,
+				B33411771C90516D00067002 /* JSPictureViewController.m */,
+				B33411791C90517D00067002 /* JSWordViewController.h */,
+				B334117A1C90517D00067002 /* JSWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -703,6 +728,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33411781C90516D00067002 /* JSPictureViewController.m in Sources */,
 				B31FEDE01C7C59DE00AEB98E /* JSEssenceViewController.m in Sources */,
 				B31FEDEA1C7C59DE00AEB98E /* JSTabBarController.m in Sources */,
 				B334116A1C8EF05300067002 /* JSPushGuideView.m in Sources */,
@@ -713,17 +739,21 @@
 				B31FEE061C7D8DE400AEB98E /* JSRecommendUserCell.m in Sources */,
 				B31FEDE51C7C59DE00AEB98E /* AppDelegate.m in Sources */,
 				B31FEDE31C7C59DE00AEB98E /* JSMeViewController.m in Sources */,
+				B33411751C90515A00067002 /* JSVoiceViewController.m in Sources */,
 				B31FEDFA1C7C824700AEB98E /* Log+Foundation.m in Sources */,
 				B334115E1C8D904400067002 /* JSVerticalButton.m in Sources */,
 				B31FEE0A1C7D94F200AEB98E /* JSRecommendUser.m in Sources */,
 				B33411631C8DA87900067002 /* JSTextField.m in Sources */,
 				B31FEDE71C7C59DE00AEB98E /* UIView+JSExtension.m in Sources */,
+				B33411721C90514C00067002 /* JSVideoViewController.m in Sources */,
 				B31FEDFD1C7C90A000AEB98E /* JSRecommendCategory.m in Sources */,
 				B31FF03D1C87028F00AEB98E /* JSRecommendTagsViewController.m in Sources */,
 				B31FF0401C87047D00AEB98E /* JSRecommendTag.m in Sources */,
 				B31FEDE91C7C59DE00AEB98E /* JSTabBar.m in Sources */,
+				B334117B1C90517D00067002 /* JSWordViewController.m in Sources */,
 				B31FEDE11C7C59DE00AEB98E /* JSFriendTrendsViewController.m in Sources */,
 				B35624051C78237D00D4D8C7 /* main.m in Sources */,
+				B334116F1C90513B00067002 /* JSAllViewController.m in Sources */,
 				B334115A1C8D416000067002 /* JSLoginRegisterViewController.m in Sources */,
 				B31FF0471C8705F700AEB98E /* JSRecommendTagCell.m in Sources */,
 				B31FEDE81C7C59DE00AEB98E /* JSNavigationController.m in Sources */,
