@@ -44,6 +44,7 @@
 		B33411751C90515A00067002 /* JSVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411741C90515A00067002 /* JSVoiceViewController.m */; };
 		B33411781C90516D00067002 /* JSPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411771C90516D00067002 /* JSPictureViewController.m */; };
 		B334117B1C90517D00067002 /* JSWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B334117A1C90517D00067002 /* JSWordViewController.m */; };
+		B334117E1C911B1800067002 /* JSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = B334117D1C911B1800067002 /* JSTopic.m */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
 		B35624291C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */; };
@@ -132,6 +133,8 @@
 		B33411771C90516D00067002 /* JSPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPictureViewController.m; sourceTree = "<group>"; };
 		B33411791C90517D00067002 /* JSWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWordViewController.h; sourceTree = "<group>"; };
 		B334117A1C90517D00067002 /* JSWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWordViewController.m; sourceTree = "<group>"; };
+		B334117C1C911B1800067002 /* JSTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTopic.h; sourceTree = "<group>"; };
+		B334117D1C911B1800067002 /* JSTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTopic.m; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B35624141C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 			children = (
 				B31FF03E1C87047D00AEB98E /* JSRecommendTag.h */,
 				B31FF03F1C87047D00AEB98E /* JSRecommendTag.m */,
+				B334117C1C911B1800067002 /* JSTopic.h */,
+				B334117D1C911B1800067002 /* JSTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -754,6 +759,7 @@
 				B31FEDE11C7C59DE00AEB98E /* JSFriendTrendsViewController.m in Sources */,
 				B35624051C78237D00D4D8C7 /* main.m in Sources */,
 				B334116F1C90513B00067002 /* JSAllViewController.m in Sources */,
+				B334117E1C911B1800067002 /* JSTopic.m in Sources */,
 				B334115A1C8D416000067002 /* JSLoginRegisterViewController.m in Sources */,
 				B31FF0471C8705F700AEB98E /* JSRecommendTagCell.m in Sources */,
 				B31FEDE81C7C59DE00AEB98E /* JSNavigationController.m in Sources */,
