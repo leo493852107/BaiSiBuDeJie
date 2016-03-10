@@ -30,6 +30,11 @@
  */
 @property (nonatomic, copy) NSString *maxtime;
 
+/**
+ *  上一次的请求参数
+ */
+@property (nonatomic, strong) NSDictionary *params;
+
 @end
 
 @implementation JSWordViewController
@@ -58,23 +63,27 @@
     [self.tableView.header beginRefreshing];
     
     self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
-
     
 }
 
 #pragma mark - 加载新的数据帖子
 - (void)loadNewTopics {
-    // 页码
-    self.page = 0;
+    // 结束上拉刷新
+    [self.tableView.footer endEditing:YES];
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
     params[@"type"] = @"29";
+    self.params = params;
     
     // 发送请求
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+        // 细节处理 多个请求以最后一个请求为准
+        if (self.params != params) {
+            return;
+        }
         // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -87,8 +96,13 @@
         // 结束刷新
         [self.tableView.header endRefreshing];
         
-//        [responseObject writeToFile:@"/Users/leo/Desktop/duanzi.plist" atomically:YES];
+        // 清空页码
+        self.page = 0;
+        
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (self.params != params) {
+            return;
+        }
         // 结束刷新
         [self.tableView.header endRefreshing];
     }];
@@ -96,6 +110,9 @@
 
 #pragma mark - 加载更多帖子数据
 - (void)loadMoreTopics {
+    // 结束下拉刷新
+    [self.tableView.header endRefreshing];
+    
     self.page++;
     
     // 参数
@@ -105,9 +122,13 @@
     params[@"type"] = @"29";
     params[@"page"] = @(self.page);
     params[@"maxtime"] = self.maxtime;
+    self.params = params;
     
     // 发送请求
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+        if (self.params != params) {
+            return;
+        }
         // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
         
@@ -123,8 +144,13 @@
         
         //        [responseObject writeToFile:@"/Users/leo/Desktop/duanzi.plist" atomically:YES];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (self.params != params) {
+            return;
+        }
         // 结束刷新
         [self.tableView.header endRefreshing];
+        // 恢复页码
+        self.page--;
     }];
 
 }
