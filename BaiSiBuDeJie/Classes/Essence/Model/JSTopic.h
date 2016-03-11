@@ -33,21 +33,21 @@
 /**
  *  顶的数量
  */
-@property (nonatomic, copy) NSString *ding;
+@property (nonatomic, assign) NSInteger ding;
 
 /**
  *  踩的数量
  */
-@property (nonatomic, copy) NSString *hate;
+@property (nonatomic, assign) NSInteger cai;
 
 /**
  *  转发的数量
  */
-@property (nonatomic, copy) NSString *repost;
+@property (nonatomic, assign) NSInteger repost;
 
 /**
  *  帖子的被评论数量
  */
-@property (nonatomic, copy) NSString *comment;
+@property (nonatomic, assign) NSInteger comment;
 
 @end

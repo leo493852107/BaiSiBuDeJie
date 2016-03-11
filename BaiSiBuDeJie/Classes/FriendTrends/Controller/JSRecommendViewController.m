@@ -139,7 +139,7 @@ static NSString * const JSUserID = @"user";
     self.userTableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
     
     self.userTableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
-    self.userTableView.footer.hidden = YES;
+
 }
 
 #pragma mark - 加载最新用户数据

@@ -62,16 +62,28 @@
  *  初始化子控制器
  */
 - (void)setUpChilidVCs {
-    JSAllViewController *all = [[JSAllViewController alloc] init];
-    [self addChildViewController:all];
-    JSVideoViewController *video = [[JSVideoViewController alloc] init];
-    [self addChildViewController:video];
-    JSVoiceViewController *voice = [[JSVoiceViewController alloc] init];
-    [self addChildViewController:voice];
-    JSPictureViewController *picture = [[JSPictureViewController alloc] init];
-    [self addChildViewController:picture];
     JSWordViewController *word = [[JSWordViewController alloc] init];
+    word.title = @"段子";
     [self addChildViewController:word];
+    
+    JSAllViewController *all = [[JSAllViewController alloc] init];
+    all.title = @"全部";
+    [self addChildViewController:all];
+
+    JSVideoViewController *video = [[JSVideoViewController alloc] init];
+    video.title = @"视频";
+    [self addChildViewController:video];
+    
+    JSVoiceViewController *voice = [[JSVoiceViewController alloc] init];
+    voice.title = @"声音";
+    [self addChildViewController:voice];
+    
+    JSPictureViewController *picture = [[JSPictureViewController alloc] init];
+    picture.title = @"图片";
+    [self addChildViewController:picture];
+    
+    
+    
 }
 
 /**
@@ -83,8 +95,8 @@
     UIView *titlesView = [[UIView alloc] init];
     titlesView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.7];
     titlesView.width = self.view.width;
-    titlesView.height = 35;
-    titlesView.y = 64;
+    titlesView.height = JSTitlesViewH;
+    titlesView.y = JSTitlesViewY;
     [self.view addSubview:titlesView];
     self.titlesView = titlesView;
     
@@ -97,16 +109,16 @@
     self.indicatorView = indicatorView;
     
     // 内部子标签
-    NSArray *titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
-    CGFloat width = titlesView.width / titles.count;
+    CGFloat width = titlesView.width / self.childViewControllers.count;
     CGFloat height = titlesView.height;
-    for (int i = 0; i < titles.count; i++) {
+    for (int i = 0; i < self.childViewControllers.count; i++) {
         UIButton *button = [[UIButton alloc] init];
         button.tag = i;
         button.height = height;
         button.width = width;
         button.x = i * button.width;
-        [button setTitle:titles[i] forState:UIControlStateNormal];
+        UIViewController *vc = self.childViewControllers[i];
+        [button setTitle:vc.title forState:UIControlStateNormal];
         // 强制布局(强制更新子控件的frame)
 //        [button layoutIfNeeded];
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
@@ -204,18 +216,13 @@
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
     
     // 取出子控制器
-    UITableViewController *vc = self.childViewControllers[index];
+    UIViewController *vc = self.childViewControllers[index];
     vc.view.x = scrollView.contentOffset.x;
     // 设置控制器view的y值为0（默认20）
     vc.view.y = 0;
     // 设置控制器view的height为整个屏幕的高度（默认是比屏幕高度少个20）
     vc.view.height = scrollView.height;
-    // 设置内边距
-    CGFloat bottom = self.tabBarController.tabBar.height;
-    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
-    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
-    // 设置滚动条内边距, 解决 tableview 滚动条被挡
-    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
+    
     [scrollView addSubview:vc.view];
     
 }

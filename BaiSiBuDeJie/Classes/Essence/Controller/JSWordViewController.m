@@ -12,6 +12,7 @@
 #import "JSTopic.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
+#import "JSTopicCell.h"
 
 @interface JSWordViewController ()
 
@@ -49,10 +50,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 初始化表格
+    [self setUpTableView];
+    
     // 添加刷新控件
     [self setUpRefresh];
     
     
+}
+
+static NSString * const JSTopicCellID = @"topic";
+
+- (void)setUpTableView {
+    // 设置内边距
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    CGFloat top = JSTitlesViewH + JSTitlesViewY;
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    // 设置滚动条内边距, 解决 tableview 滚动条被挡
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
+    // 注册
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JSTopicCell class]) bundle:nil] forCellReuseIdentifier:JSTopicCellID];
 }
 
 #pragma mark - 添加刷新控件
@@ -113,14 +134,13 @@
     // 结束下拉刷新
     [self.tableView.header endRefreshing];
     
-    self.page++;
-    
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
     params[@"type"] = @"29";
-    params[@"page"] = @(self.page);
+    NSInteger page = self.page + 1;
+    params[@"page"] = @(page);
     params[@"maxtime"] = self.maxtime;
     self.params = params;
     
@@ -142,15 +162,16 @@
         // 结束刷新
         [self.tableView.footer endRefreshing];
         
-        //        [responseObject writeToFile:@"/Users/leo/Desktop/duanzi.plist" atomically:YES];
+        // 设置页码
+        self.page = page;
+        
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (self.params != params) {
             return;
         }
         // 结束刷新
         [self.tableView.header endRefreshing];
-        // 恢复页码
-        self.page--;
+        
     }];
 
 }
@@ -162,24 +183,22 @@
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    self.tableView.footer.hidden = (self.topics.count == 0);
     return self.topics.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    
-    JSTopic *topic = self.topics[indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+   
+    JSTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:JSTopicCellID];
+    cell.topic = self.topics[indexPath.row];
     
     return cell;
+}
+
+#pragma mark - 代理方法
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 200;
 }
 
 
