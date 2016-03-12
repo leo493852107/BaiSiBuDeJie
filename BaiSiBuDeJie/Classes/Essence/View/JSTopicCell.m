@@ -57,13 +57,48 @@
     // 设置其他控件
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.nameLabel.text = topic.name;
-    self.createTimeLabel.text = topic.created_at;
+    
+    // 处理时间
+    [self handleDate:topic.created_at];
     
     // 设置按钮文字
     [self setUpButtonTitle:self.dingButton count:topic.ding placeholder:@"顶"];
     [self setUpButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
     [self setUpButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setUpButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
+    
+}
+
+#pragma mark - 处理时间
+- (void)handleDate:(NSString *)create_time {
+    // 当前时间
+    NSDate *now = [NSDate date];
+    // 发帖时间
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    // 设置日期格式
+    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSDate *create = [fmt dateFromString:create_time];
+    
+    JSLog(@"%@", [now deltaFrom:create]);
+    
+    // 日历
+//    NSCalendar *calendar = [NSCalendar currentCalendar];
+//    
+//    // 比较时间
+//    NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+//    NSDateComponents *cmps = [calendar components:unit fromDate:create toDate:now options:0];
+//    
+//    JSLog(@"%@ --- %@", create, now);
+//    JSLog(@"%zd,%zd,%zd,%zd,%zd,%zd", cmps.year,cmps.month,cmps.day,cmps.hour,cmps.minute,cmps.second);
+
+    
+    // 获得 NSDate 每一个元素
+//    NSInteger year = [calendar component:NSCalendarUnitYear fromDate:now];
+//    NSInteger month = [calendar component:NSCalendarUnitMonth fromDate:now];
+//    NSInteger day = [calendar component:NSCalendarUnitDay fromDate:now];
+//    NSDateComponents *cmps = [calendar components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:now];
+//    JSLog(@"%zd,%zd,%zd", cmps.year,cmps.month,cmps.day);
+    
     
 }
 

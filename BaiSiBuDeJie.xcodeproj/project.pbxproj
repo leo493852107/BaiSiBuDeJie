@@ -48,6 +48,7 @@
 		B33411811C92E0EE00067002 /* JSConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411801C92E0EE00067002 /* JSConstant.m */; };
 		B33411881C92E5AE00067002 /* JSTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411861C92E5AE00067002 /* JSTopicCell.m */; };
 		B33411891C92E5AE00067002 /* JSTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411871C92E5AE00067002 /* JSTopicCell.xib */; };
+		B334118C1C9415D900067002 /* NSDate+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B334118B1C9415D900067002 /* NSDate+JSExtension.m */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
 		B35624291C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */; };
@@ -143,6 +144,8 @@
 		B33411851C92E5AE00067002 /* JSTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTopicCell.h; sourceTree = "<group>"; };
 		B33411861C92E5AE00067002 /* JSTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTopicCell.m; sourceTree = "<group>"; };
 		B33411871C92E5AE00067002 /* JSTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSTopicCell.xib; sourceTree = "<group>"; };
+		B334118A1C9415D900067002 /* NSDate+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JSExtension.h"; sourceTree = "<group>"; };
+		B334118B1C9415D900067002 /* NSDate+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JSExtension.m"; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B35624141C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 				B31FEDCD1C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m */,
 				B31FEDCE1C7C59DE00AEB98E /* UIView+JSExtension.h */,
 				B31FEDCF1C7C59DE00AEB98E /* UIView+JSExtension.m */,
+				B334118A1C9415D900067002 /* NSDate+JSExtension.h */,
+				B334118B1C9415D900067002 /* NSDate+JSExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -750,6 +755,7 @@
 				B33411781C90516D00067002 /* JSPictureViewController.m in Sources */,
 				B31FEDE01C7C59DE00AEB98E /* JSEssenceViewController.m in Sources */,
 				B31FEDEA1C7C59DE00AEB98E /* JSTabBarController.m in Sources */,
+				B334118C1C9415D900067002 /* NSDate+JSExtension.m in Sources */,
 				B334116A1C8EF05300067002 /* JSPushGuideView.m in Sources */,
 				B33411881C92E5AE00067002 /* JSTopicCell.m in Sources */,
 				B31FEE011C7C92CC00AEB98E /* JSRecommendCategoryCell.m in Sources */,

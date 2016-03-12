@@ -16,6 +16,7 @@
 #import "UIView+JSExtension.h"
 #import "UIBarButtonItem+JSExtension.h"
 #import "JSConstant.h"
+#import "NSDate+JSExtension.h"
 
 
 #define JSKeyWindow [UIApplication sharedApplication].keyWindow
