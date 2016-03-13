@@ -59,7 +59,14 @@
     self.nameLabel.text = topic.name;
     
     // 处理时间
-    [self handleDate:topic.created_at];
+//    [self handleDate:topic.created_at];
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    
+    NSDate *create = [fmt dateFromString:topic.created_at];
+    NSDate *now = [NSDate date];
+    
+    
     
     // 设置按钮文字
     [self setUpButtonTitle:self.dingButton count:topic.ding placeholder:@"顶"];
