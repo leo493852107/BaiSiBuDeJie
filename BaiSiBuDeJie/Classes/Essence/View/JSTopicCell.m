@@ -54,18 +54,14 @@
 - (void)setTopic:(JSTopic *)topic {
     _topic = topic;
     
-    // 设置其他控件
+    // 设置头像
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    // 设置名字
     self.nameLabel.text = topic.name;
     
-    // 处理时间
-//    [self handleDate:topic.created_at];
-    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    
-    NSDate *create = [fmt dateFromString:topic.created_at];
-    NSDate *now = [NSDate date];
-    
+    // 设置帖子的创建时间
+    self.createTimeLabel.text = topic.passtime;
     
     
     // 设置按钮文字

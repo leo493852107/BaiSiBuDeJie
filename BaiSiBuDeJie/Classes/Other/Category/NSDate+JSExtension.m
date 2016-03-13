@@ -43,7 +43,7 @@
 
 - (BOOL)isToday {
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-    fmt.dateFormat = @"yyyy-mm-dd";
+    fmt.dateFormat = @"yyyy-MM-dd";
     
     NSString *nowString = [fmt stringFromDate:[NSDate date]];
     NSString *selfString = [fmt stringFromDate:self];

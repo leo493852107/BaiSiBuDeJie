@@ -23,7 +23,12 @@
 /**
  *  创建帖子的时间
  */
-@property (nonatomic, copy) NSString *created_at;
+@property (nonatomic, copy) NSString *create_time;
+
+/**
+ *  帖子通过的时间
+ */
+@property (nonatomic, copy) NSString *passtime;
 
 /**
  *  帖子的内容
