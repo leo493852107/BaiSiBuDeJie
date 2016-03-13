@@ -7,6 +7,7 @@
 //
 
 #import "JSTopic.h"
+#import <MJExtension.h>
 
 //@interface JSTopic ()
 //{
@@ -19,6 +20,14 @@
 {
     @private
     CGFloat _cellHeight;
+}
+
++ (NSDictionary *)replacedKeyFromPropertyName {
+    return @{
+             @"small_image" : @"image0",
+             @"large_image" : @"image1",
+             @"middle_image" :@"image2"
+             };
 }
 
 - (NSString *)passtime {
@@ -62,14 +71,14 @@
 
 - (CGFloat)cellHeight {
     if (!_cellHeight) {
-        JSLogFunc;
+
         // 文字的最大尺寸
         CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * JSTopicCellMargin, MAXFLOAT);
         // 计算文字的高度 
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
         
         // cell的高度
-        _cellHeight = JSTopicCellTextY + textH + JSTopicCellBottomBarH + 2 * JSTopicCellMargin;
+        _cellHeight = JSTopicCellTextY + textH + JSTopicCellBottomBarH + 2 * JSTopicCellMargin + self.height;
     }
     
     

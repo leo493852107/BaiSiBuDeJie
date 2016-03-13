@@ -7,8 +7,20 @@
 //
 
 #import "JSRecommendCategory.h"
+#import <MJExtension.h>
 
 @implementation JSRecommendCategory
+
++ (NSDictionary *)replacedKeyFromPropertyName {
+    return @{@"ID" : @"id"};
+}
+
+//+ (NSString *)replacedKeyFromPropertyName121:(NSString *)propertyName {
+//    if ([propertyName isEqualToString:@"ID"]) {
+//        return @"id";
+//    }
+//    return propertyName;
+//}
 
 - (NSMutableArray *)users {
     if (!_users) {

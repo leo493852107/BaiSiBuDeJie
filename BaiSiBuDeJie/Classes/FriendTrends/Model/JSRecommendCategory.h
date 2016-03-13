@@ -13,7 +13,7 @@
 /**
  *  id
  */
-@property (nonatomic, copy) NSString *id;
+@property (nonatomic, copy) NSString *ID;
 
 /**
  *  总数
