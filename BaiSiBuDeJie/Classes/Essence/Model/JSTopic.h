@@ -6,7 +6,7 @@
 //  Copyright © 2016 leo. All rights reserved.
 //  帖子
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface JSTopic : NSObject
 
@@ -59,6 +59,15 @@
  *  是否为新浪加V用户
  */
 @property (nonatomic, assign, getter=isSina_v) BOOL sina_v;
+
+
+
+/**
+ *  额外的辅助属性
+ *  cell的高度
+ */
+@property (nonatomic, assign, readonly) CGFloat cellHeight;
+
 
 
 @end

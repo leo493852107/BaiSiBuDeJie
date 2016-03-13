@@ -202,16 +202,9 @@ static NSString * const JSTopicCellID = @"topic";
     // 取出帖子模型
     JSTopic *topic = self.topics[indexPath.row];
     
-    // 文字的最大尺寸
-    CGFloat textY = 55;
-    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * JSTopicCellMargin, MAXFLOAT);
-//    CGFloat textH = [topic.text sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:maxSize].height;
-    CGFloat textH = [topic.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+    // 返回这个模型对应的cell的高度
+    return topic.cellHeight;
     
-    // cell的高度
-    CGFloat cellH = JSTopicCellTextY + textH + JSTopicCellBottomBarH + 2 * JSTopicCellMargin;
-    
-    return cellH;
 }
 
 

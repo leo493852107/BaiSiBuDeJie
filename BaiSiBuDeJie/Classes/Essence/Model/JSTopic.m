@@ -8,7 +8,18 @@
 
 #import "JSTopic.h"
 
+//@interface JSTopic ()
+//{
+//    CGFloat _cellHeight;
+//}
+//
+//@end
+
 @implementation JSTopic
+{
+    @private
+    CGFloat _cellHeight;
+}
 
 - (NSString *)passtime {
     // 日期格式化类
@@ -47,6 +58,22 @@
     }
     
     
+}
+
+- (CGFloat)cellHeight {
+    if (!_cellHeight) {
+        JSLogFunc;
+        // 文字的最大尺寸
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * JSTopicCellMargin, MAXFLOAT);
+        // 计算文字的高度 
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+        
+        // cell的高度
+        _cellHeight = JSTopicCellTextY + textH + JSTopicCellBottomBarH + 2 * JSTopicCellMargin;
+    }
+    
+    
+    return _cellHeight;
 }
 
 @end
