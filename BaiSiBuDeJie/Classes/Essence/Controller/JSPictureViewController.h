@@ -6,8 +6,8 @@
 //  Copyright © 2016 leo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "JSTopicViewController.h"
 
-@interface JSPictureViewController : UITableViewController
+@interface JSPictureViewController : JSTopicViewController
 
 @end
