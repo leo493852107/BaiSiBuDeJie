@@ -199,7 +199,19 @@ static NSString * const JSTopicCellID = @"topic";
 
 #pragma mark - 代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 200;
+    // 取出帖子模型
+    JSTopic *topic = self.topics[indexPath.row];
+    
+    // 文字的最大尺寸
+    CGFloat textY = 55;
+    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * JSTopicCellMargin, MAXFLOAT);
+//    CGFloat textH = [topic.text sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:maxSize].height;
+    CGFloat textH = [topic.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+    
+    // cell的高度
+    CGFloat cellH = JSTopicCellTextY + textH + JSTopicCellBottomBarH + 2 * JSTopicCellMargin;
+    
+    return cellH;
 }
 
 

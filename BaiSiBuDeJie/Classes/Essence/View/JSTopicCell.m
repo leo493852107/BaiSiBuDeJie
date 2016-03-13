@@ -41,8 +41,15 @@
  */
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 
-
+/**
+ *  新浪加V
+ */
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
+
+/**
+ *  帖子的文字内容
+ */
+@property (weak, nonatomic) IBOutlet UILabel *text_Label;
 
 @end
 
@@ -78,6 +85,10 @@
     [self setUpButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
     [self setUpButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setUpButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
+    
+    
+    // 设置帖子的文字内容
+    self.text_Label.text = topic.text;
     
 }
 
@@ -135,12 +146,10 @@
 
 - (void)setFrame:(CGRect)frame {
     
-    static CGFloat margin = 10;
-    
-    frame.origin.x = margin;
-    frame.size.width -= 2 * frame.origin.x;
-    frame.size.height -= margin;
-    frame.origin.y += margin;
+    frame.origin.x = JSTopicCellMargin;
+    frame.size.width -= 2 * JSTopicCellMargin;
+    frame.size.height -= JSTopicCellMargin;
+    frame.origin.y += JSTopicCellMargin;
     
     [super setFrame:frame];
 }
