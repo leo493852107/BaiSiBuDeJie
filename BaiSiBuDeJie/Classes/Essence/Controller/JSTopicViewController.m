@@ -40,9 +40,6 @@
 
 @implementation JSTopicViewController
 
-- (NSString *)type {
-    return nil;
-}
 
 - (NSMutableArray *)topics {
     if (!_topics) {
@@ -100,7 +97,7 @@ static NSString * const JSTopicCellID = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = self.type;
+    params[@"type"] = @(self.type);
     self.params = params;
     
     // 发送请求
@@ -142,7 +139,7 @@ static NSString * const JSTopicCellID = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = self.type;
+    params[@"type"] = @(self.type);
     NSInteger page = self.page + 1;
     params[@"page"] = @(page);
     params[@"maxtime"] = self.maxtime;

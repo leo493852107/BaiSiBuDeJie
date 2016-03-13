@@ -8,11 +8,7 @@
 
 #import "JSEssenceViewController.h"
 #import "JSRecommendTagsViewController.h"
-#import "JSAllViewController.h"
-#import "JSVideoViewController.h"
-#import "JSVoiceViewController.h"
-#import "JSPictureViewController.h"
-#import "JSWordViewController.h"
+#import "JSTopicViewController.h"
 
 @interface JSEssenceViewController () <UIScrollViewDelegate>
 
@@ -62,24 +58,29 @@
  *  初始化子控制器
  */
 - (void)setUpChilidVCs {
-    JSWordViewController *word = [[JSWordViewController alloc] init];
+    JSTopicViewController *word = [[JSTopicViewController alloc] init];
     word.title = @"段子";
+    word.type = JSTopicTypeWord;
     [self addChildViewController:word];
     
-    JSAllViewController *all = [[JSAllViewController alloc] init];
+    JSTopicViewController *all = [[JSTopicViewController alloc] init];
     all.title = @"全部";
+    all.type = JSTopicTypeAll;
     [self addChildViewController:all];
 
-    JSVideoViewController *video = [[JSVideoViewController alloc] init];
+    JSTopicViewController *video = [[JSTopicViewController alloc] init];
     video.title = @"视频";
+    video.type = JSTopicTypeVideo;
     [self addChildViewController:video];
     
-    JSVoiceViewController *voice = [[JSVoiceViewController alloc] init];
+    JSTopicViewController *voice = [[JSTopicViewController alloc] init];
     voice.title = @"声音";
+    voice.type = JSTopicTypeVoice;
     [self addChildViewController:voice];
     
-    JSPictureViewController *picture = [[JSPictureViewController alloc] init];
+    JSTopicViewController *picture = [[JSTopicViewController alloc] init];
     picture.title = @"图片";
+    picture.type = JSTopicTypePicture;
     [self addChildViewController:picture];
     
     
