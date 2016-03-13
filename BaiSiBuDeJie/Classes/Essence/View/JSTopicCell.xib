@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYf-E1-cGy" userLabel="time">
-                        <rect key="frame" x="63" y="38.5" width="31" height="14.5"/>
+                        <rect key="frame" x="63" y="38" width="31" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                         <state key="highlighted" backgroundImage="cellFollowClickIcon"/>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEc-7n-DfG" userLabel="底部工具条">
-                        <rect key="frame" x="0.0" y="239.5" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="239" width="320" height="44"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-content-line" translatesAutoresizingMaskIntoConstraints="NO" id="N46-hA-25j" userLabel="顶部分割线">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
@@ -142,6 +142,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="e3d-fu-UTg">
+                        <rect key="frame" x="44" y="44" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="6ev-0v-RUx"/>
+                            <constraint firstAttribute="width" constant="14" id="pY9-cb-C6W"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="fYf-E1-cGy" firstAttribute="bottom" secondItem="5Rf-Rt-L9a" secondAttribute="bottom" id="0Up-Ye-28a"/>
@@ -149,8 +156,10 @@
                     <constraint firstItem="E7L-En-ybl" firstAttribute="top" secondItem="bEk-3O-nK3" secondAttribute="top" id="BYT-XA-EYu"/>
                     <constraint firstAttribute="trailingMargin" secondItem="E7L-En-ybl" secondAttribute="trailing" constant="10" id="EPD-rX-5wu"/>
                     <constraint firstAttribute="trailing" secondItem="lEc-7n-DfG" secondAttribute="trailing" id="Hjc-0Z-shR"/>
+                    <constraint firstItem="e3d-fu-UTg" firstAttribute="bottom" secondItem="5Rf-Rt-L9a" secondAttribute="bottom" constant="5" id="L8d-zE-nbx"/>
                     <constraint firstItem="bEk-3O-nK3" firstAttribute="top" secondItem="5Rf-Rt-L9a" secondAttribute="top" id="OeD-pb-EsK"/>
                     <constraint firstItem="5Rf-Rt-L9a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Qmf-xw-2y4"/>
+                    <constraint firstItem="e3d-fu-UTg" firstAttribute="trailing" secondItem="5Rf-Rt-L9a" secondAttribute="trailing" constant="5" id="SQN-AH-wb2"/>
                     <constraint firstAttribute="bottom" secondItem="lEc-7n-DfG" secondAttribute="bottom" id="TkJ-zw-BiD"/>
                     <constraint firstItem="bEk-3O-nK3" firstAttribute="leading" secondItem="5Rf-Rt-L9a" secondAttribute="trailing" constant="10" id="YH8-nb-TEn"/>
                     <constraint firstItem="5Rf-Rt-L9a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="dgT-35-7Su"/>
@@ -175,11 +184,13 @@
                 <outlet property="nameLabel" destination="bEk-3O-nK3" id="W8N-WN-8jU"/>
                 <outlet property="profileImageView" destination="5Rf-Rt-L9a" id="Rb3-oc-Ogi"/>
                 <outlet property="shareButton" destination="G9Q-Pi-jjY" id="XVm-EU-qKe"/>
+                <outlet property="sinaVView" destination="e3d-fu-UTg" id="Fbe-6Z-p9I"/>
             </connections>
             <point key="canvasLocation" x="314" y="480"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cell-content-line" width="299" height="1"/>
         <image name="cellFollowClickIcon" width="19" height="20"/>
