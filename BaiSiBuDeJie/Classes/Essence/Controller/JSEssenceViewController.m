@@ -58,6 +58,11 @@
  *  初始化子控制器
  */
 - (void)setUpChilidVCs {
+    JSTopicViewController *picture = [[JSTopicViewController alloc] init];
+    picture.title = @"图片";
+    picture.type = JSTopicTypePicture;
+    [self addChildViewController:picture];
+    
     JSTopicViewController *word = [[JSTopicViewController alloc] init];
     word.title = @"段子";
     word.type = JSTopicTypeWord;
@@ -77,11 +82,6 @@
     voice.title = @"声音";
     voice.type = JSTopicTypeVoice;
     [self addChildViewController:voice];
-    
-    JSTopicViewController *picture = [[JSTopicViewController alloc] init];
-    picture.title = @"图片";
-    picture.type = JSTopicTypePicture;
-    [self addChildViewController:picture];
     
     
     

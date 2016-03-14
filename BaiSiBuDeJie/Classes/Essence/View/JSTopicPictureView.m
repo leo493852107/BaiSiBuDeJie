@@ -10,6 +10,7 @@
 #import "JSTopic.h"
 #import <UIImageView+WebCache.h>
 #import <DALabeledCircularProgressView.h>
+#import "JSShowPictureViewController.h"
 
 @interface JSTopicPictureView ()
 
@@ -46,6 +47,18 @@
     self.autoresizingMask = UIViewAutoresizingNone;
     self.progressView.roundedCorners = 2;
     self.progressView.progressLabel.textColor = [UIColor whiteColor];
+    
+    // 给图片添加监听器
+    self.image_View.userInteractionEnabled = YES;
+    
+    [self.image_View addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)]];
+}
+
+- (void)showPicture {
+    JSShowPictureViewController *showPicture = [[JSShowPictureViewController alloc] init];
+
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showPicture animated:YES completion:nil];
+    
 }
 
 - (void)setTopic:(JSTopic *)topic {
