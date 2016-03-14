@@ -8,7 +8,8 @@
 
 #import "JSTopicCell.h"
 #import "JSTopic.h"
-#import "UIImageView+WebCache.h"
+#import <UIImageView+WebCache.h>
+#import "JSTopicPictureView.h"
 
 @interface JSTopicCell ()
 
@@ -51,9 +52,23 @@
  */
 @property (weak, nonatomic) IBOutlet UILabel *text_Label;
 
+/**
+ *  图片帖子中间的内容
+ */
+@property (nonatomic, weak) JSTopicPictureView *pictureView;
+
 @end
 
 @implementation JSTopicCell
+
+- (JSTopicPictureView *)pictureView {
+    if (!_pictureView) {
+        JSTopicPictureView *pictureView = [JSTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
 
 - (void)awakeFromNib {
     UIImageView *bgView = [[UIImageView alloc] init];
@@ -90,6 +105,18 @@
     // 设置帖子的文字内容
     self.text_Label.text = topic.text;
     
+    // 根据模型类型(帖子类型)添加对应的内容到cell的中间
+    if (topic.type == JSTopicTypePicture) {
+        // 图片帖子
+        self.pictureView.topic = topic;
+        self.pictureView.frame = topic.pictureViewFrame;
+        
+//        JSLog(@"%@", NSStringFromCGRect(topic.pictureViewFrame));
+    } else if (topic.type == JSTopicTypeVoice) {
+        // 声音帖子
+        
+    }
+    
 }
 
 #pragma mark - 处理时间
@@ -102,7 +129,6 @@
     fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     NSDate *create = [fmt dateFromString:create_time];
     
-    JSLog(@"%@", [now deltaFrom:create]);
     
     // 日历
 //    NSCalendar *calendar = [NSCalendar currentCalendar];

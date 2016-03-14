@@ -45,6 +45,8 @@
 		B33411891C92E5AE00067002 /* JSTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411871C92E5AE00067002 /* JSTopicCell.xib */; };
 		B334118C1C9415D900067002 /* NSDate+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B334118B1C9415D900067002 /* NSDate+JSExtension.m */; };
 		B334118F1C950A7800067002 /* JSTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B334118E1C950A7800067002 /* JSTopicViewController.m */; };
+		B33411921C965CF600067002 /* JSTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411911C965CF600067002 /* JSTopicPictureView.m */; };
+		B33411941C965D2300067002 /* JSTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411931C965D2300067002 /* JSTopicPictureView.xib */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
 		B35624291C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */; };
@@ -134,6 +136,9 @@
 		B334118B1C9415D900067002 /* NSDate+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JSExtension.m"; sourceTree = "<group>"; };
 		B334118D1C950A7800067002 /* JSTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTopicViewController.h; sourceTree = "<group>"; };
 		B334118E1C950A7800067002 /* JSTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTopicViewController.m; sourceTree = "<group>"; };
+		B33411901C965CF600067002 /* JSTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTopicPictureView.h; sourceTree = "<group>"; };
+		B33411911C965CF600067002 /* JSTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTopicPictureView.m; sourceTree = "<group>"; };
+		B33411931C965D2300067002 /* JSTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSTopicPictureView.xib; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B35624141C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -245,6 +250,9 @@
 				B33411851C92E5AE00067002 /* JSTopicCell.h */,
 				B33411861C92E5AE00067002 /* JSTopicCell.m */,
 				B33411871C92E5AE00067002 /* JSTopicCell.xib */,
+				B33411901C965CF600067002 /* JSTopicPictureView.h */,
+				B33411911C965CF600067002 /* JSTopicPictureView.m */,
+				B33411931C965D2300067002 /* JSTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -651,6 +659,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33411941C965D2300067002 /* JSTopicPictureView.xib in Resources */,
 				B334115B1C8D416000067002 /* JSLoginRegisterViewController.xib in Resources */,
 				B31FEDE21C7C59DE00AEB98E /* JSFriendTrendsViewController.xib in Resources */,
 				B334116C1C8EF06200067002 /* JSPushGuideView.xib in Resources */,
@@ -740,6 +749,7 @@
 				B31FEE011C7C92CC00AEB98E /* JSRecommendCategoryCell.m in Sources */,
 				B334118F1C950A7800067002 /* JSTopicViewController.m in Sources */,
 				B31FEDE41C7C59DE00AEB98E /* JSNewViewController.m in Sources */,
+				B33411921C965CF600067002 /* JSTopicPictureView.m in Sources */,
 				B31FEDE61C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m in Sources */,
 				B31FEDF31C7C753200AEB98E /* JSRecommendViewController.m in Sources */,
 				B31FEE061C7D8DE400AEB98E /* JSRecommendUserCell.m in Sources */,

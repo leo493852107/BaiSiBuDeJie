@@ -72,19 +72,22 @@
 @property (nonatomic, assign) CGFloat height;
 
 /**
- *  小图片
+ *  小图片的URL
  */
 @property (nonatomic, copy) NSString *small_image;
 
 /**
- *  中图片
+ *  中图片的URL
  */
 @property (nonatomic, copy) NSString *middle_image;
 
 /**
- *  大图片
+ *  大图片的URL
  */
 @property (nonatomic, copy) NSString *large_image;
+
+@property (nonatomic, assign) JSTopicType type;
+
 
 
 /**
@@ -92,6 +95,13 @@
  *  cell的高度
  */
 @property (nonatomic, assign, readonly) CGFloat cellHeight;
+
+
+/**
+ *  图片控件的frame
+ */
+@property (nonatomic, assign, readonly) CGRect pictureViewFrame;
+
 
 
 

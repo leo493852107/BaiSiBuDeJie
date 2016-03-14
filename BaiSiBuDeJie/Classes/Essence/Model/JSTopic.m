@@ -20,6 +20,7 @@
 {
     @private
     CGFloat _cellHeight;
+    CGRect _pictureViewFrame;
 }
 
 + (NSDictionary *)replacedKeyFromPropertyName {
@@ -78,7 +79,30 @@
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
         
         // cell的高度
-        _cellHeight = JSTopicCellTextY + textH + JSTopicCellBottomBarH + 2 * JSTopicCellMargin + self.height;
+        // 文字部分的高度
+        _cellHeight = JSTopicCellTextY + textH + JSTopicCellMargin;
+        
+        // 根据段子的类型来计算cell的高度
+        if (self.type == JSTopicTypePicture) {
+            // 图片显示出来的宽度,高度
+            CGFloat pictureW = maxSize.width;
+            CGFloat pictureH = pictureW * self.height / self.width;
+            
+            // 计算图片控件的frame
+            CGFloat pictureX = JSTopicCellMargin;
+            CGFloat pictureY = JSTopicCellTextY + textH + JSTopicCellMargin;
+            _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            
+            // 图片
+            _cellHeight += pictureH + JSTopicCellMargin;
+            
+        } else if (self.type == JSTopicTypeVoice) {
+            // 声音帖子
+            
+        }
+        
+        // 底部工具条的高度
+        _cellHeight += JSTopicCellBottomBarH + JSTopicCellMargin;
     }
     
     

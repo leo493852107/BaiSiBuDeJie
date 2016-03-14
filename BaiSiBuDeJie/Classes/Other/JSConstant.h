@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum{
+    JSTopicTypeAll = 1,
+    JSTopicTypePicture = 10,
+    JSTopicTypeWord = 29,
+    JSTopicTypeVoice = 31,
+    JSTopicTypeVideo = 41
+} JSTopicType;
+
 /** 精华-所有顶部标题的高度 */
 UIKIT_EXTERN CGFloat const JSTitlesViewH;
 
