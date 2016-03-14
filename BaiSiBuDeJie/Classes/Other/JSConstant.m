@@ -16,3 +16,11 @@ CGFloat const JSTopicCellTextY = 55;
 /** 精华 cell 底部工具条的高度 */
 CGFloat const JSTopicCellBottomBarH = 44;
 
+
+/** 精华 cell 图片帖子的最大高度 */
+CGFloat const JSTopicCellPictureMaxH = 1000;
+
+/** 精华 cell 图片帖子一旦超过最大高度，就使用 Standard */
+CGFloat const JSTopicCellPictureStandardH = 250;
+
+

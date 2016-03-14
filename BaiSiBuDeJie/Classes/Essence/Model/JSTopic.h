@@ -96,12 +96,15 @@
  */
 @property (nonatomic, assign, readonly) CGFloat cellHeight;
 
-
 /**
  *  图片控件的frame
  */
 @property (nonatomic, assign, readonly) CGRect pictureViewFrame;
 
+/**
+ *  图片是否太大
+ */
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 
 
 

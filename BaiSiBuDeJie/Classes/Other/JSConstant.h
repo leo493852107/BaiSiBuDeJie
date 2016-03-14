@@ -32,3 +32,10 @@ UIKIT_EXTERN CGFloat const JSTopicCellTextY;
 UIKIT_EXTERN CGFloat const JSTopicCellBottomBarH;
 
 
+/** 精华 cell 图片帖子的最大高度 */
+UIKIT_EXTERN CGFloat const JSTopicCellPictureMaxH;
+
+/** 精华 cell 图片帖子一旦超过最大高度，就使用 Standard */
+UIKIT_EXTERN CGFloat const JSTopicCellPictureStandardH;
+
+

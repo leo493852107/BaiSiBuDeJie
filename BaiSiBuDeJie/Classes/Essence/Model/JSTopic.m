@@ -87,6 +87,12 @@
             // 图片显示出来的宽度,高度
             CGFloat pictureW = maxSize.width;
             CGFloat pictureH = pictureW * self.height / self.width;
+            if (pictureH >= JSTopicCellPictureMaxH) {
+                // 图片高度过长
+                pictureH = JSTopicCellPictureStandardH;
+                // 大图
+                self.bigPicture = YES;
+            }
             
             // 计算图片控件的frame
             CGFloat pictureX = JSTopicCellMargin;
