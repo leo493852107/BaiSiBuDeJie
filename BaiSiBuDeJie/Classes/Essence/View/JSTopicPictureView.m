@@ -9,6 +9,7 @@
 #import "JSTopicPictureView.h"
 #import "JSTopic.h"
 #import <UIImageView+WebCache.h>
+#import <DALabeledCircularProgressView.h>
 
 @interface JSTopicPictureView ()
 
@@ -27,6 +28,11 @@
  */
 @property (weak, nonatomic) IBOutlet UIButton *seeBigButton;
 
+/**
+ *  进度条控件
+ */
+@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
+
 @end
 
 @implementation JSTopicPictureView
@@ -38,6 +44,8 @@
 
 - (void)awakeFromNib {
     self.autoresizingMask = UIViewAutoresizingNone;
+    self.progressView.roundedCorners = 2;
+    self.progressView.progressLabel.textColor = [UIColor whiteColor];
 }
 
 - (void)setTopic:(JSTopic *)topic {
@@ -49,7 +57,15 @@
      */
     
     // 设置图片
-    [self.image_View sd_setImageWithURL:[NSURL URLWithString:topic.large_image]];
+//    [self.image_View sd_setImageWithURL:[NSURL URLWithString:topic.large_image]];
+    [self.image_View sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        self.progressView.hidden = NO;
+        CGFloat progress = 1.0 * receivedSize / expectedSize;
+        [self.progressView setProgress:progress];
+        self.progressView.progressLabel.text = [NSString stringWithFormat:@"%.0f%%", progress * 100];
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.progressView.hidden = YES;
+    }];
     
     // 判断是否为 gif
     NSString *extension = topic.large_image.pathExtension;
