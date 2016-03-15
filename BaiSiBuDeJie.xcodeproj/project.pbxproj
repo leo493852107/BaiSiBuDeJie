@@ -49,6 +49,7 @@
 		B33411941C965D2300067002 /* JSTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411931C965D2300067002 /* JSTopicPictureView.xib */; };
 		B33411981C9706C100067002 /* JSShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411961C9706C100067002 /* JSShowPictureViewController.m */; };
 		B33411991C9706C100067002 /* JSShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411971C9706C100067002 /* JSShowPictureViewController.xib */; };
+		B334119C1C979C8200067002 /* JSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B334119B1C979C8200067002 /* JSProgressView.m */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
 		B35624291C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */; };
@@ -144,6 +145,8 @@
 		B33411951C9706C100067002 /* JSShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSShowPictureViewController.h; sourceTree = "<group>"; };
 		B33411961C9706C100067002 /* JSShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSShowPictureViewController.m; sourceTree = "<group>"; };
 		B33411971C9706C100067002 /* JSShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSShowPictureViewController.xib; sourceTree = "<group>"; };
+		B334119A1C979C8200067002 /* JSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProgressView.h; sourceTree = "<group>"; };
+		B334119B1C979C8200067002 /* JSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProgressView.m; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B35624141C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -261,6 +264,8 @@
 				B33411901C965CF600067002 /* JSTopicPictureView.h */,
 				B33411911C965CF600067002 /* JSTopicPictureView.m */,
 				B33411931C965D2300067002 /* JSTopicPictureView.xib */,
+				B334119A1C979C8200067002 /* JSProgressView.h */,
+				B334119B1C979C8200067002 /* JSProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -774,6 +779,7 @@
 				B31FF03D1C87028F00AEB98E /* JSRecommendTagsViewController.m in Sources */,
 				B31FF0401C87047D00AEB98E /* JSRecommendTag.m in Sources */,
 				B31FEDE91C7C59DE00AEB98E /* JSTabBar.m in Sources */,
+				B334119C1C979C8200067002 /* JSProgressView.m in Sources */,
 				B31FEDE11C7C59DE00AEB98E /* JSFriendTrendsViewController.m in Sources */,
 				B33411981C9706C100067002 /* JSShowPictureViewController.m in Sources */,
 				B35624051C78237D00D4D8C7 /* main.m in Sources */,

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class JSTopic;
 @interface JSShowPictureViewController : UIViewController
+
+/**
+ *  帖子
+ */
+@property (nonatomic, strong) JSTopic *topic;
 
 @end
