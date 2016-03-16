@@ -10,8 +10,11 @@
 #import "JSTopic.h"
 #import <UIImageView+WebCache.h>
 #import <SVProgressHUD.h>
+#import "JSProgressView.h"
 
 @interface JSShowPictureViewController ()
+
+@property (weak, nonatomic) IBOutlet JSProgressView *progressView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -51,7 +54,16 @@
         image_View.centerY = screenH * 0.5;
     }
     
-    [image_View sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image]];
+    // 马上显示当前图片的下载进度
+    [self.progressView setProgress:self.topic.pictureProgress animated:YES];
+    
+    // 下载图片
+    [image_View sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        [self.progressView setProgress:1.0 * receivedSize / expectedSize animated:NO];
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.progressView.hidden = YES;
+    }];
     
     
 }
@@ -63,6 +75,12 @@
 
 // 将图片保存到相册
 - (IBAction)save {
+    if (self.image_View.image == nil) {
+        [SVProgressHUD showErrorWithStatus:@"图片并未下载完毕!"];
+        return;
+    }
+        
+        
     UIImageWriteToSavedPhotosAlbum(self.image_View.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 
