@@ -16,9 +16,6 @@
 		B31FEDE51C7C59DE00AEB98E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDCA1C7C59DE00AEB98E /* AppDelegate.m */; };
 		B31FEDE61C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDCD1C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m */; };
 		B31FEDE71C7C59DE00AEB98E /* UIView+JSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDCF1C7C59DE00AEB98E /* UIView+JSExtension.m */; };
-		B31FEDE81C7C59DE00AEB98E /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDD51C7C59DE00AEB98E /* JSNavigationController.m */; };
-		B31FEDE91C7C59DE00AEB98E /* JSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDDB1C7C59DE00AEB98E /* JSTabBar.m */; };
-		B31FEDEA1C7C59DE00AEB98E /* JSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDDD1C7C59DE00AEB98E /* JSTabBarController.m */; };
 		B31FEDF31C7C753200AEB98E /* JSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDF11C7C753200AEB98E /* JSRecommendViewController.m */; };
 		B31FEDF41C7C753200AEB98E /* JSRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FEDF21C7C753200AEB98E /* JSRecommendViewController.xib */; };
 		B31FEDFA1C7C824700AEB98E /* Log+Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDF91C7C824700AEB98E /* Log+Foundation.m */; };
@@ -37,8 +34,6 @@
 		B334115E1C8D904400067002 /* JSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B334115D1C8D904400067002 /* JSVerticalButton.m */; };
 		B33411601C8D91F600067002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B334115F1C8D91F600067002 /* Assets.xcassets */; };
 		B33411631C8DA87900067002 /* JSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411621C8DA87900067002 /* JSTextField.m */; };
-		B334116A1C8EF05300067002 /* JSPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411691C8EF05300067002 /* JSPushGuideView.m */; };
-		B334116C1C8EF06200067002 /* JSPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B334116B1C8EF06200067002 /* JSPushGuideView.xib */; };
 		B334117E1C911B1800067002 /* JSTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = B334117D1C911B1800067002 /* JSTopic.m */; };
 		B33411811C92E0EE00067002 /* JSConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411801C92E0EE00067002 /* JSConstant.m */; };
 		B33411881C92E5AE00067002 /* JSTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411861C92E5AE00067002 /* JSTopicCell.m */; };
@@ -50,6 +45,13 @@
 		B33411981C9706C100067002 /* JSShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411961C9706C100067002 /* JSShowPictureViewController.m */; };
 		B33411991C9706C100067002 /* JSShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411971C9706C100067002 /* JSShowPictureViewController.xib */; };
 		B334119C1C979C8200067002 /* JSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B334119B1C979C8200067002 /* JSProgressView.m */; };
+		B33411DE1C999B5500067002 /* JSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411DD1C999B5500067002 /* JSTabBar.m */; };
+		B33411E21C999B7500067002 /* JSPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411E01C999B7500067002 /* JSPushGuideView.m */; };
+		B33411E31C999B7500067002 /* JSPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411E11C999B7500067002 /* JSPushGuideView.xib */; };
+		B33411E71C999BBA00067002 /* JSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411E51C999BBA00067002 /* JSPublishViewController.m */; };
+		B33411E81C999BBA00067002 /* JSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411E61C999BBA00067002 /* JSPublishViewController.xib */; };
+		B33411EB1C999CFF00067002 /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411EA1C999CFF00067002 /* JSNavigationController.m */; };
+		B33411EE1C999D1800067002 /* JSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411ED1C999D1800067002 /* JSTabBarController.m */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
 		B35624291C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */; };
@@ -90,12 +92,6 @@
 		B31FEDCE1C7C59DE00AEB98E /* UIView+JSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JSExtension.h"; sourceTree = "<group>"; };
 		B31FEDCF1C7C59DE00AEB98E /* UIView+JSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JSExtension.m"; sourceTree = "<group>"; };
 		B31FEDD01C7C59DE00AEB98E /* leoPch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leoPch.pch; sourceTree = "<group>"; };
-		B31FEDD41C7C59DE00AEB98E /* JSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationController.h; sourceTree = "<group>"; };
-		B31FEDD51C7C59DE00AEB98E /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
-		B31FEDDA1C7C59DE00AEB98E /* JSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBar.h; sourceTree = "<group>"; };
-		B31FEDDB1C7C59DE00AEB98E /* JSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBar.m; sourceTree = "<group>"; };
-		B31FEDDC1C7C59DE00AEB98E /* JSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBarController.h; sourceTree = "<group>"; };
-		B31FEDDD1C7C59DE00AEB98E /* JSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBarController.m; sourceTree = "<group>"; };
 		B31FEDF01C7C753200AEB98E /* JSRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendViewController.h; sourceTree = "<group>"; };
 		B31FEDF11C7C753200AEB98E /* JSRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendViewController.m; sourceTree = "<group>"; };
 		B31FEDF21C7C753200AEB98E /* JSRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRecommendViewController.xib; sourceTree = "<group>"; };
@@ -125,9 +121,6 @@
 		B334115F1C8D91F600067002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B33411611C8DA87900067002 /* JSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTextField.h; sourceTree = "<group>"; };
 		B33411621C8DA87900067002 /* JSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTextField.m; sourceTree = "<group>"; };
-		B33411681C8EF05300067002 /* JSPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPushGuideView.h; sourceTree = "<group>"; };
-		B33411691C8EF05300067002 /* JSPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPushGuideView.m; sourceTree = "<group>"; };
-		B334116B1C8EF06200067002 /* JSPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSPushGuideView.xib; sourceTree = "<group>"; };
 		B334117C1C911B1800067002 /* JSTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTopic.h; sourceTree = "<group>"; };
 		B334117D1C911B1800067002 /* JSTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTopic.m; sourceTree = "<group>"; };
 		B334117F1C92E0EE00067002 /* JSConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSConstant.h; sourceTree = "<group>"; };
@@ -147,6 +140,18 @@
 		B33411971C9706C100067002 /* JSShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSShowPictureViewController.xib; sourceTree = "<group>"; };
 		B334119A1C979C8200067002 /* JSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProgressView.h; sourceTree = "<group>"; };
 		B334119B1C979C8200067002 /* JSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProgressView.m; sourceTree = "<group>"; };
+		B33411DC1C999B5500067002 /* JSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBar.h; sourceTree = "<group>"; };
+		B33411DD1C999B5500067002 /* JSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBar.m; sourceTree = "<group>"; };
+		B33411DF1C999B7500067002 /* JSPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPushGuideView.h; sourceTree = "<group>"; };
+		B33411E01C999B7500067002 /* JSPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPushGuideView.m; sourceTree = "<group>"; };
+		B33411E11C999B7500067002 /* JSPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSPushGuideView.xib; sourceTree = "<group>"; };
+		B33411E41C999BBA00067002 /* JSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPublishViewController.h; sourceTree = "<group>"; };
+		B33411E51C999BBA00067002 /* JSPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPublishViewController.m; sourceTree = "<group>"; };
+		B33411E61C999BBA00067002 /* JSPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSPublishViewController.xib; sourceTree = "<group>"; };
+		B33411E91C999CFF00067002 /* JSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationController.h; sourceTree = "<group>"; };
+		B33411EA1C999CFF00067002 /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
+		B33411EC1C999D1800067002 /* JSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBarController.h; sourceTree = "<group>"; };
+		B33411ED1C999D1800067002 /* JSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTabBarController.m; sourceTree = "<group>"; };
 		B35624001C78237D00D4D8C7 /* BaiSiBuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiSiBuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624041C78237D00D4D8C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B35624141C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -393,11 +398,10 @@
 		B31FEDC81C7C59DE00AEB98E /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				B33411641C8EF00800067002 /* PushGuide */,
+				B33411D11C999A7400067002 /* Controller */,
+				B33411DB1C999B1300067002 /* View */,
 				B31FEDCB1C7C59DE00AEB98E /* Category */,
 				B31FEDD11C7C59DE00AEB98E /* Lib */,
-				B31FEDD21C7C59DE00AEB98E /* Navigation */,
-				B31FEDD81C7C59DE00AEB98E /* Tabbar */,
 				B31FEDC91C7C59DE00AEB98E /* AppDelegate.h */,
 				B31FEDCA1C7C59DE00AEB98E /* AppDelegate.m */,
 				B31FEDD01C7C59DE00AEB98E /* leoPch.pch */,
@@ -428,82 +432,30 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
-		B31FEDD21C7C59DE00AEB98E /* Navigation */ = {
+		B33411D11C999A7400067002 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B31FEDD31C7C59DE00AEB98E /* Controller */,
-				B31FEDD61C7C59DE00AEB98E /* Model */,
-				B31FEDD71C7C59DE00AEB98E /* View */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		B31FEDD31C7C59DE00AEB98E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B31FEDD41C7C59DE00AEB98E /* JSNavigationController.h */,
-				B31FEDD51C7C59DE00AEB98E /* JSNavigationController.m */,
+				B33411E91C999CFF00067002 /* JSNavigationController.h */,
+				B33411EA1C999CFF00067002 /* JSNavigationController.m */,
+				B33411EC1C999D1800067002 /* JSTabBarController.h */,
+				B33411ED1C999D1800067002 /* JSTabBarController.m */,
+				B33411E41C999BBA00067002 /* JSPublishViewController.h */,
+				B33411E51C999BBA00067002 /* JSPublishViewController.m */,
+				B33411E61C999BBA00067002 /* JSPublishViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		B31FEDD61C7C59DE00AEB98E /* Model */ = {
+		B33411DB1C999B1300067002 /* View */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B31FEDD71C7C59DE00AEB98E /* View */ = {
-			isa = PBXGroup;
-			children = (
+				B33411DF1C999B7500067002 /* JSPushGuideView.h */,
+				B33411E01C999B7500067002 /* JSPushGuideView.m */,
+				B33411E11C999B7500067002 /* JSPushGuideView.xib */,
+				B33411DC1C999B5500067002 /* JSTabBar.h */,
+				B33411DD1C999B5500067002 /* JSTabBar.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		B31FEDD81C7C59DE00AEB98E /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				B31FEDD91C7C59DE00AEB98E /* Controller */,
-				B31FEDDE1C7C59DE00AEB98E /* Model */,
-				B31FEDDF1C7C59DE00AEB98E /* View */,
-			);
-			path = Tabbar;
-			sourceTree = "<group>";
-		};
-		B31FEDD91C7C59DE00AEB98E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B31FEDDA1C7C59DE00AEB98E /* JSTabBar.h */,
-				B31FEDDB1C7C59DE00AEB98E /* JSTabBar.m */,
-				B31FEDDC1C7C59DE00AEB98E /* JSTabBarController.h */,
-				B31FEDDD1C7C59DE00AEB98E /* JSTabBarController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		B31FEDDE1C7C59DE00AEB98E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B31FEDDF1C7C59DE00AEB98E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B33411641C8EF00800067002 /* PushGuide */ = {
-			isa = PBXGroup;
-			children = (
-				B33411681C8EF05300067002 /* JSPushGuideView.h */,
-				B33411691C8EF05300067002 /* JSPushGuideView.m */,
-				B334116B1C8EF06200067002 /* JSPushGuideView.xib */,
-			);
-			path = PushGuide;
 			sourceTree = "<group>";
 		};
 		B35623F71C78237D00D4D8C7 = {
@@ -676,13 +628,14 @@
 				B33411941C965D2300067002 /* JSTopicPictureView.xib in Resources */,
 				B334115B1C8D416000067002 /* JSLoginRegisterViewController.xib in Resources */,
 				B31FEDE21C7C59DE00AEB98E /* JSFriendTrendsViewController.xib in Resources */,
-				B334116C1C8EF06200067002 /* JSPushGuideView.xib in Resources */,
 				B31FEE021C7C92CC00AEB98E /* JSRecommendCategoryCell.xib in Resources */,
 				B31FEDF41C7C753200AEB98E /* JSRecommendViewController.xib in Resources */,
 				B33411601C8D91F600067002 /* Assets.xcassets in Resources */,
+				B33411E81C999BBA00067002 /* JSPublishViewController.xib in Resources */,
 				B31FF0481C8705F700AEB98E /* JSRecommendTagCell.xib in Resources */,
 				B33411891C92E5AE00067002 /* JSTopicCell.xib in Resources */,
 				B31FEE071C7D8DE400AEB98E /* JSRecommendUserCell.xib in Resources */,
+				B33411E31C999B7500067002 /* JSPushGuideView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,9 +709,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31FEDE01C7C59DE00AEB98E /* JSEssenceViewController.m in Sources */,
-				B31FEDEA1C7C59DE00AEB98E /* JSTabBarController.m in Sources */,
 				B334118C1C9415D900067002 /* NSDate+JSExtension.m in Sources */,
-				B334116A1C8EF05300067002 /* JSPushGuideView.m in Sources */,
 				B33411881C92E5AE00067002 /* JSTopicCell.m in Sources */,
 				B31FEE011C7C92CC00AEB98E /* JSRecommendCategoryCell.m in Sources */,
 				B334118F1C950A7800067002 /* JSTopicViewController.m in Sources */,
@@ -766,19 +717,23 @@
 				B33411921C965CF600067002 /* JSTopicPictureView.m in Sources */,
 				B31FEDE61C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m in Sources */,
 				B31FEDF31C7C753200AEB98E /* JSRecommendViewController.m in Sources */,
+				B33411E71C999BBA00067002 /* JSPublishViewController.m in Sources */,
 				B31FEE061C7D8DE400AEB98E /* JSRecommendUserCell.m in Sources */,
 				B31FEDE51C7C59DE00AEB98E /* AppDelegate.m in Sources */,
+				B33411EE1C999D1800067002 /* JSTabBarController.m in Sources */,
 				B31FEDE31C7C59DE00AEB98E /* JSMeViewController.m in Sources */,
+				B33411DE1C999B5500067002 /* JSTabBar.m in Sources */,
 				B31FEDFA1C7C824700AEB98E /* Log+Foundation.m in Sources */,
 				B334115E1C8D904400067002 /* JSVerticalButton.m in Sources */,
 				B31FEE0A1C7D94F200AEB98E /* JSRecommendUser.m in Sources */,
 				B33411631C8DA87900067002 /* JSTextField.m in Sources */,
+				B33411E21C999B7500067002 /* JSPushGuideView.m in Sources */,
 				B31FEDE71C7C59DE00AEB98E /* UIView+JSExtension.m in Sources */,
 				B33411811C92E0EE00067002 /* JSConstant.m in Sources */,
 				B31FEDFD1C7C90A000AEB98E /* JSRecommendCategory.m in Sources */,
 				B31FF03D1C87028F00AEB98E /* JSRecommendTagsViewController.m in Sources */,
+				B33411EB1C999CFF00067002 /* JSNavigationController.m in Sources */,
 				B31FF0401C87047D00AEB98E /* JSRecommendTag.m in Sources */,
-				B31FEDE91C7C59DE00AEB98E /* JSTabBar.m in Sources */,
 				B334119C1C979C8200067002 /* JSProgressView.m in Sources */,
 				B31FEDE11C7C59DE00AEB98E /* JSFriendTrendsViewController.m in Sources */,
 				B33411981C9706C100067002 /* JSShowPictureViewController.m in Sources */,
@@ -786,7 +741,6 @@
 				B334117E1C911B1800067002 /* JSTopic.m in Sources */,
 				B334115A1C8D416000067002 /* JSLoginRegisterViewController.m in Sources */,
 				B31FF0471C8705F700AEB98E /* JSRecommendTagCell.m in Sources */,
-				B31FEDE81C7C59DE00AEB98E /* JSNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

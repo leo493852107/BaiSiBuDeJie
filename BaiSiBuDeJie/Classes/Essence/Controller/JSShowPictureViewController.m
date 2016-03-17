@@ -27,11 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    // 屏幕尺寸
-    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
-    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
-    
     // 添加图片
     UIImageView *image_View = [[UIImageView alloc] init];
     image_View.userInteractionEnabled = YES;
@@ -40,10 +35,10 @@
     self.image_View = image_View;
 
     // 图片尺寸
-    CGFloat pictureW = screenW;
+    CGFloat pictureW = JSScreenW;
     CGFloat pictureH = pictureW * self.topic.height / self.topic.width;
     
-    if (pictureH > screenH) {
+    if (pictureH > JSScreenH) {
         // 图片显示高度超过一个屏幕 需要滚动查看
         image_View.frame = CGRectMake(0, 0, pictureW, pictureH);
         self.scrollView.contentSize = CGSizeMake(0, pictureH);
@@ -51,7 +46,7 @@
         
     } else {
         image_View.size = CGSizeMake(pictureW, pictureH);
-        image_View.centerY = screenH * 0.5;
+        image_View.centerY = JSScreenH * 0.5;
     }
     
     // 马上显示当前图片的下载进度
