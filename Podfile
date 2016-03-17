@@ -8,6 +8,7 @@ target 'BaiSiBuDeJie' do
 	pod 'MJExtension', '~> 2.5.2'
 	pod 'MJRefresh', '~> 2.3.2'
 	pod 'DACircularProgress', '~> 2.3.1'
+	pod 'pop', '~> 1.0' 
 
 end
 
