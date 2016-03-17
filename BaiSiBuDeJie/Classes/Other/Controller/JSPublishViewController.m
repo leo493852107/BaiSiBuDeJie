@@ -16,9 +16,20 @@ static CGFloat const JSSpringFactor = 10;
 @interface JSPublishViewController ()
 
 
+@property (nonatomic, copy) void (^complectionBlock)();
+
 @end
 
 @implementation JSPublishViewController
+
+
+- (void)test:(void (^)())abc {
+//- (void)test:(void (^)())completionBlock {
+    void (^block)() = ^{
+        
+    };
+    block();
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,6 +51,8 @@ static CGFloat const JSSpringFactor = 10;
     CGFloat xMargin = (JSScreenW - 2 * buttonStartX - maxCols * buttonW) / (maxCols - 1);
     for (int i = 0; i < images.count; i++) {
         JSVerticalButton *button = [[JSVerticalButton alloc] init];
+        button.tag = i;
+        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:button];
         // 设置内容
         button.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -87,12 +100,57 @@ static CGFloat const JSSpringFactor = 10;
     [sloganView pop_addAnimation:anim forKey:nil];
 
     
+}
+
+
+#pragma mark - 先执行退出动画，动画完毕后执行 complectionBlock
+- (void)cancelWithComplectionBlock:(void (^)())complectionBlock {
     
+    // 让控制器的 view 不能被点
+    self.view.userInteractionEnabled = NO;
+    
+    int beginIndex = 2;
+    
+    for (int i = beginIndex; i < self.view.subviews.count; i++) {
+        UIView *subview = self.view.subviews[i];
+        
+        // 基本动画
+        POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
+        CGFloat centerEndY = subview.centerY + JSScreenH;
+        // 动画的执行节奏（一开始很慢，后面很快）
+        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+        anim.toValue = [NSValue valueWithCGPoint:CGPointMake(subview.centerX, centerEndY)];
+        anim.beginTime = CACurrentMediaTime() + (i - beginIndex) * JSAnimationDelay;
+        [subview pop_addAnimation:anim forKey:nil];
+        
+        // 监听最后一个动画
+        if (i == self.view.subviews.count - 1) {
+            [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
+                [self dismissViewControllerAnimated:NO completion:nil];
+                
+                // 执行传进来的 complectionBlock 参数
+//                if (complectionBlock) {
+//                    complectionBlock();
+//                }
+                !complectionBlock ? : complectionBlock();
+                
+            }];
+        }
+    }
+}
+
+- (void)buttonClick:(UIButton *)button {
+    [self cancelWithComplectionBlock:^{
+        if (button.tag == 0) {
+            JSLog(@"发视频");
+        }
+    }];
 }
 
 
 - (IBAction)cancel {
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self cancelWithComplectionBlock:nil];
+    
 }
 
 
@@ -106,27 +164,7 @@ static CGFloat const JSSpringFactor = 10;
  */
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
-//    
-//    animation.springBounciness = 20;
-//    animation.springSpeed = 20;
-//    animation.fromValue = [NSValue valueWithCGPoint:CGPointMake(100, 100)];
-//    animation.toValue = [NSValue valueWithCGPoint:CGPointMake(200, 200)];
-//    
-//    [self.sloganView pop_addAnimation:animation forKey:nil];
-    
-//    POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-//    
-//    animation.beginTime = CACurrentMediaTime() + 1.0;
-//    animation.springBounciness = 20;
-//    animation.springSpeed = 20;
-//    animation.fromValue = @(self.sloganView.layer.position.y);
-//    animation.toValue = @(300);
-//    animation.completionBlock = ^(POPAnimation *anim, BOOL finished) {
-//        JSLog(@"动画结束");
-//    };
-//    
-//    [self.sloganView.layer pop_addAnimation:animation forKey:nil];
+    [self cancelWithComplectionBlock:nil];
 }
 
 
