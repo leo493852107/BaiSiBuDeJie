@@ -48,8 +48,8 @@
 		B33411DE1C999B5500067002 /* JSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411DD1C999B5500067002 /* JSTabBar.m */; };
 		B33411E21C999B7500067002 /* JSPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411E01C999B7500067002 /* JSPushGuideView.m */; };
 		B33411E31C999B7500067002 /* JSPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411E11C999B7500067002 /* JSPushGuideView.xib */; };
-		B33411E71C999BBA00067002 /* JSPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411E51C999BBA00067002 /* JSPublishViewController.m */; };
-		B33411E81C999BBA00067002 /* JSPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411E61C999BBA00067002 /* JSPublishViewController.xib */; };
+		B33411E71C999BBA00067002 /* JSPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411E51C999BBA00067002 /* JSPublishView.m */; };
+		B33411E81C999BBA00067002 /* JSPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411E61C999BBA00067002 /* JSPublishView.xib */; };
 		B33411EB1C999CFF00067002 /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411EA1C999CFF00067002 /* JSNavigationController.m */; };
 		B33411EE1C999D1800067002 /* JSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411ED1C999D1800067002 /* JSTabBarController.m */; };
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
@@ -145,9 +145,9 @@
 		B33411DF1C999B7500067002 /* JSPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPushGuideView.h; sourceTree = "<group>"; };
 		B33411E01C999B7500067002 /* JSPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPushGuideView.m; sourceTree = "<group>"; };
 		B33411E11C999B7500067002 /* JSPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSPushGuideView.xib; sourceTree = "<group>"; };
-		B33411E41C999BBA00067002 /* JSPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPublishViewController.h; sourceTree = "<group>"; };
-		B33411E51C999BBA00067002 /* JSPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPublishViewController.m; sourceTree = "<group>"; };
-		B33411E61C999BBA00067002 /* JSPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSPublishViewController.xib; sourceTree = "<group>"; };
+		B33411E41C999BBA00067002 /* JSPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPublishView.h; sourceTree = "<group>"; };
+		B33411E51C999BBA00067002 /* JSPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPublishView.m; sourceTree = "<group>"; };
+		B33411E61C999BBA00067002 /* JSPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSPublishView.xib; sourceTree = "<group>"; };
 		B33411E91C999CFF00067002 /* JSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationController.h; sourceTree = "<group>"; };
 		B33411EA1C999CFF00067002 /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
 		B33411EC1C999D1800067002 /* JSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTabBarController.h; sourceTree = "<group>"; };
@@ -439,9 +439,9 @@
 				B33411EA1C999CFF00067002 /* JSNavigationController.m */,
 				B33411EC1C999D1800067002 /* JSTabBarController.h */,
 				B33411ED1C999D1800067002 /* JSTabBarController.m */,
-				B33411E41C999BBA00067002 /* JSPublishViewController.h */,
-				B33411E51C999BBA00067002 /* JSPublishViewController.m */,
-				B33411E61C999BBA00067002 /* JSPublishViewController.xib */,
+				B33411E41C999BBA00067002 /* JSPublishView.h */,
+				B33411E51C999BBA00067002 /* JSPublishView.m */,
+				B33411E61C999BBA00067002 /* JSPublishView.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -588,6 +588,7 @@
 				TargetAttributes = {
 					B35623FF1C78237D00D4D8C7 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 3398J37KJL;
 					};
 					B35624181C78237D00D4D8C7 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -631,7 +632,7 @@
 				B31FEE021C7C92CC00AEB98E /* JSRecommendCategoryCell.xib in Resources */,
 				B31FEDF41C7C753200AEB98E /* JSRecommendViewController.xib in Resources */,
 				B33411601C8D91F600067002 /* Assets.xcassets in Resources */,
-				B33411E81C999BBA00067002 /* JSPublishViewController.xib in Resources */,
+				B33411E81C999BBA00067002 /* JSPublishView.xib in Resources */,
 				B31FF0481C8705F700AEB98E /* JSRecommendTagCell.xib in Resources */,
 				B33411891C92E5AE00067002 /* JSTopicCell.xib in Resources */,
 				B31FEE071C7D8DE400AEB98E /* JSRecommendUserCell.xib in Resources */,
@@ -717,7 +718,7 @@
 				B33411921C965CF600067002 /* JSTopicPictureView.m in Sources */,
 				B31FEDE61C7C59DE00AEB98E /* UIBarButtonItem+JSExtension.m in Sources */,
 				B31FEDF31C7C753200AEB98E /* JSRecommendViewController.m in Sources */,
-				B33411E71C999BBA00067002 /* JSPublishViewController.m in Sources */,
+				B33411E71C999BBA00067002 /* JSPublishView.m in Sources */,
 				B31FEE061C7D8DE400AEB98E /* JSRecommendUserCell.m in Sources */,
 				B31FEDE51C7C59DE00AEB98E /* AppDelegate.m in Sources */,
 				B33411EE1C999D1800067002 /* JSTabBarController.m in Sources */,
@@ -862,12 +863,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BaiSiBuDeJie/Classes/Other/leoPch.pch";
 				INFOPLIST_FILE = BaiSiBuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leo.BaiSiBuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -877,12 +881,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BaiSiBuDeJie/Classes/Other/leoPch.pch";
 				INFOPLIST_FILE = BaiSiBuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leo.BaiSiBuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

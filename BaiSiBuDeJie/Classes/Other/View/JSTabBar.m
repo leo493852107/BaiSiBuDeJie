@@ -7,7 +7,7 @@
 //
 
 #import "JSTabBar.h"
-#import "JSPublishViewController.h"
+#import "JSPublishView.h"
 
 #define TabBarButtonCount 5
 
@@ -41,9 +41,13 @@
 }
 
 - (void)publishClick {
-    JSPublishViewController *publish = [[JSPublishViewController alloc] init];
+//    JSPublishView *publish = [[JSPublishView alloc] init];
     
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
+//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
+    JSPublishView *publish = [JSPublishView publishView];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    publish.frame = window.bounds;
+    [window addSubview:publish];
     
 }
 

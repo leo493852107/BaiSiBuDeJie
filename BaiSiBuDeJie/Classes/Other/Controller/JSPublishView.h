@@ -1,5 +1,5 @@
 //
-//  JSPublishViewController.h
+//  JSPublishView.h
 //  BaiSiBuDeJie
 //
 //  Created by leo on 3/16/16.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSPublishViewController : UIViewController
+@interface JSPublishView : UIView
+
++ (instancetype)publishView;
 
 @end

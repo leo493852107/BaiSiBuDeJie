@@ -1,41 +1,39 @@
 //
-//  JSPublishViewController.m
+//  JSPublishView.m
 //  BaiSiBuDeJie
 //
 //  Created by leo on 3/16/16.
 //  Copyright © 2016 leo. All rights reserved.
 //
 
-#import "JSPublishViewController.h"
+#import "JSPublishView.h"
 #import "JSVerticalButton.h"
 #import <POP.h>
+
+#define JSRootView [UIApplication sharedApplication].keyWindow.rootViewController.view
 
 static CGFloat const JSAnimationDelay = 0.05;
 static CGFloat const JSSpringFactor = 10;
 
-@interface JSPublishViewController ()
+@interface JSPublishView ()
 
-
-@property (nonatomic, copy) void (^complectionBlock)();
 
 @end
 
-@implementation JSPublishViewController
+@implementation JSPublishView
 
-
-- (void)test:(void (^)())abc {
-//- (void)test:(void (^)())completionBlock {
-    void (^block)() = ^{
-        
-    };
-    block();
++ (instancetype)publishView {
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+
+- (void)awakeFromNib {
+
+    // 不能被点
+    JSRootView.userInteractionEnabled = NO;
     
     // 让控制器的 view 不能被点击
-    self.view.userInteractionEnabled = NO;
+    self.userInteractionEnabled = NO;
     
     
     // 数据
@@ -53,7 +51,7 @@ static CGFloat const JSSpringFactor = 10;
         JSVerticalButton *button = [[JSVerticalButton alloc] init];
         button.tag = i;
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:button];
+        [self addSubview:button];
         // 设置内容
         button.titleLabel.font = [UIFont systemFontOfSize:14];
         [button setTitle:titles[i] forState:UIControlStateNormal];
@@ -80,7 +78,7 @@ static CGFloat const JSSpringFactor = 10;
     
     // 添加标语
     UIImageView *sloganView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app_slogan"]];
-    [self.view addSubview:sloganView];
+    [self addSubview:sloganView];
     
     // 标语动画
     POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
@@ -94,7 +92,8 @@ static CGFloat const JSSpringFactor = 10;
     anim.springSpeed = JSSpringFactor;
     [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
         // 标语动画执行完毕，恢复点击事件
-        self.view.userInteractionEnabled = YES;
+        JSRootView.userInteractionEnabled = YES;
+        self.userInteractionEnabled = YES;
     }];
 
     [sloganView pop_addAnimation:anim forKey:nil];
@@ -106,13 +105,14 @@ static CGFloat const JSSpringFactor = 10;
 #pragma mark - 先执行退出动画，动画完毕后执行 complectionBlock
 - (void)cancelWithComplectionBlock:(void (^)())complectionBlock {
     
-    // 让控制器的 view 不能被点
-    self.view.userInteractionEnabled = NO;
+    // 不能被点
+    JSRootView.userInteractionEnabled = NO;
+    self.userInteractionEnabled = NO;
     
-    int beginIndex = 2;
+    int beginIndex = 1;
     
-    for (int i = beginIndex; i < self.view.subviews.count; i++) {
-        UIView *subview = self.view.subviews[i];
+    for (int i = beginIndex; i < self.subviews.count; i++) {
+        UIView *subview = self.subviews[i];
         
         // 基本动画
         POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
@@ -124,14 +124,13 @@ static CGFloat const JSSpringFactor = 10;
         [subview pop_addAnimation:anim forKey:nil];
         
         // 监听最后一个动画
-        if (i == self.view.subviews.count - 1) {
+        if (i == self.subviews.count - 1) {
             [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
-                [self dismissViewControllerAnimated:NO completion:nil];
+                JSRootView.userInteractionEnabled = YES;
+                
+                [self removeFromSuperview];
                 
                 // 执行传进来的 complectionBlock 参数
-//                if (complectionBlock) {
-//                    complectionBlock();
-//                }
                 !complectionBlock ? : complectionBlock();
                 
             }];
