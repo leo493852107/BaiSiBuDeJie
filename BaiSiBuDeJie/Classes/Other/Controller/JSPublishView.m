@@ -10,7 +10,6 @@
 #import "JSVerticalButton.h"
 #import <POP.h>
 
-#define JSRootView [UIApplication sharedApplication].keyWindow.rootViewController.view
 
 static CGFloat const JSAnimationDelay = 0.05;
 static CGFloat const JSSpringFactor = 10;
@@ -22,17 +21,33 @@ static CGFloat const JSSpringFactor = 10;
 
 @implementation JSPublishView
 
+
 + (instancetype)publishView {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
+/**
+ *  全局变量 用 ***_
+ */
+static UIWindow *window_;
+
++ (void)show {
+    // 创建窗口
+    window_ = [[UIWindow alloc] init];
+    window_.frame = [UIScreen mainScreen].bounds;
+    window_.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
+    window_.hidden = NO;
+    
+    // 添加发布界面
+    JSPublishView *publishView = [JSPublishView publishView];
+    publishView.frame = window_.bounds;
+    [window_ addSubview:publishView];
+    
+}
 
 - (void)awakeFromNib {
 
     // 不能被点
-    JSRootView.userInteractionEnabled = NO;
-    
-    // 让控制器的 view 不能被点击
     self.userInteractionEnabled = NO;
     
     
@@ -92,7 +107,6 @@ static CGFloat const JSSpringFactor = 10;
     anim.springSpeed = JSSpringFactor;
     [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
         // 标语动画执行完毕，恢复点击事件
-        JSRootView.userInteractionEnabled = YES;
         self.userInteractionEnabled = YES;
     }];
 
@@ -106,7 +120,6 @@ static CGFloat const JSSpringFactor = 10;
 - (void)cancelWithComplectionBlock:(void (^)())complectionBlock {
     
     // 不能被点
-    JSRootView.userInteractionEnabled = NO;
     self.userInteractionEnabled = NO;
     
     int beginIndex = 1;
@@ -126,9 +139,11 @@ static CGFloat const JSSpringFactor = 10;
         // 监听最后一个动画
         if (i == self.subviews.count - 1) {
             [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
-                JSRootView.userInteractionEnabled = YES;
                 
-                [self removeFromSuperview];
+//                [self removeFromSuperview];
+                
+                // 销毁窗口
+                window_ = nil;
                 
                 // 执行传进来的 complectionBlock 参数
                 !complectionBlock ? : complectionBlock();

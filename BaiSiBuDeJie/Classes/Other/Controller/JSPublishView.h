@@ -10,6 +10,9 @@
 
 @interface JSPublishView : UIView
 
-+ (instancetype)publishView;
+/**
+ *  显示
+ */
++ (void)show;
 
 @end
