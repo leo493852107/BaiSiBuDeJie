@@ -40,14 +40,18 @@
     return self;
 }
 
+//UIWindow *window;
+
 - (void)publishClick {
-//    JSPublishView *publish = [[JSPublishView alloc] init];
+    // 窗口级别
+    // UIWindowLevelNormal < UIWindowLevelStatusBar < UIWindowLevelAlert
     
-//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
-    JSPublishView *publish = [JSPublishView publishView];
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    publish.frame = window.bounds;
-    [window addSubview:publish];
+//    window = [[UIWindow alloc] init];
+//    window.frame = [UIScreen mainScreen].bounds;
+//    window.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.5];
+//    window.hidden = NO;
+    
+    [JSPublishView show];
     
 }
 
