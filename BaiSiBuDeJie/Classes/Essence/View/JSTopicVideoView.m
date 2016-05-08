@@ -1,29 +1,30 @@
 //
-//  JSTopicVoiceView.m
+//  JSTopicVideoView.m
 //  BaiSiBuDeJie
 //
 //  Created by leo on 5/8/16.
 //  Copyright © 2016 leo. All rights reserved.
 //
 
-#import "JSTopicVoiceView.h"
+#import "JSTopicVideoView.h"
 #import "JSTopic.h"
 #import <UIImageView+WebCache.h>
 #import "JSShowPictureViewController.h"
 
-@interface JSTopicVoiceView ()
+@interface JSTopicVideoView ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *voicetimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *videoTimeLabel;
 
 @end
 
-@implementation JSTopicVoiceView
+@implementation JSTopicVideoView
 
-+ (instancetype)voiceView {
+
++ (instancetype)videoView {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
@@ -52,11 +53,11 @@
     // 播放次数
     self.playcountLabel.text = [NSString stringWithFormat:@"%zd播放", topic.playcount];
     
-    // 播放时长
+    // 时长
+    NSInteger minute = topic.videotime / 60;
+    NSInteger second = topic.videotime % 60;
+    self.videoTimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
     
-    NSInteger minute = topic.voicetime / 60;
-    NSInteger second = topic.voicetime % 60;
-    self.voicetimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
 }
 
 @end

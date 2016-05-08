@@ -22,14 +22,14 @@
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joi-fW-VYD" userLabel="播放次数">
                     <rect key="frame" x="184" y="0.0" width="42" height="21"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ND-qF-FG9" userLabel="播放时长">
                     <rect key="frame" x="184" y="333" width="42" height="21"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
             <connections>
                 <outlet property="imageView" destination="scC-QU-MjW" id="tPv-kS-Jfz"/>
                 <outlet property="playcountLabel" destination="joi-fW-VYD" id="EkN-dC-tBO"/>
-                <outlet property="voicelengthLabel" destination="5ND-qF-FG9" id="tCQ-fy-nbJ"/>
+                <outlet property="voicetimeLabel" destination="5ND-qF-FG9" id="ADp-Hw-lTQ"/>
             </connections>
             <point key="canvasLocation" x="-405" y="497"/>
         </view>

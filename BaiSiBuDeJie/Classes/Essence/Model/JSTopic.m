@@ -110,6 +110,16 @@
             _voiceViewFrame = CGRectMake(voiceX, voiceY, voiceW, voiceH);
             
             _cellHeight += voiceH + JSTopicCellMargin;
+        } else if (self.type == JSTopicTypeVideo) {
+            // 视频帖子
+            CGFloat videoX = JSTopicCellMargin;
+            CGFloat videoY = JSTopicCellTextY + textH + JSTopicCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoViewFrame = CGRectMake(videoX, videoY, videoW, videoH);
+            
+            _cellHeight += videoH + JSTopicCellMargin;
+
         }
         
         // 底部工具条的高度

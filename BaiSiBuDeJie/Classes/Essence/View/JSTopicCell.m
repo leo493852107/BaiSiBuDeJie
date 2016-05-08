@@ -11,6 +11,7 @@
 #import <UIImageView+WebCache.h>
 #import "JSTopicPictureView.h"
 #import "JSTopicVoiceView.h"
+#import "JSTopicVideoView.h"
 
 @interface JSTopicCell ()
 
@@ -63,6 +64,13 @@
  */
 @property (nonatomic, weak) JSTopicVoiceView *voiceView;
 
+/**
+ *  视频帖子中间的内容
+ */
+@property (nonatomic, weak) JSTopicVideoView *videoView;
+
+
+
 @end
 
 @implementation JSTopicCell
@@ -83,6 +91,15 @@
         _voiceView = voiceView;
     }
     return _voiceView;
+}
+
+- (JSTopicVideoView *)videoView {
+    if (!_videoView) {
+        JSTopicVideoView *videoView = [JSTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
 }
 
 - (void)awakeFromNib {
@@ -123,15 +140,30 @@
     // 根据模型类型(帖子类型)添加对应的内容到cell的中间
     if (topic.type == JSTopicTypePicture) {
         // 图片帖子
+        self.pictureView.hidden = NO;
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureViewFrame;
-        
-//        JSLog(@"%@", NSStringFromCGRect(topic.pictureViewFrame));
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     } else if (topic.type == JSTopicTypeVoice) {
         // 声音帖子
+        self.voiceView.hidden = NO;
         self.voiceView.topic = topic;
         self.voiceView.frame = topic.voiceViewFrame;
-        
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+    } else if (topic.type == JSTopicTypeVideo) {
+        // 视频帖子
+        self.videoView.hidden = NO;
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoViewFrame;
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+    } else {
+        // 段子帖子
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
     }
     
 }
