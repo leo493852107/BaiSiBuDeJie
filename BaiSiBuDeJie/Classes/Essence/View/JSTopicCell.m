@@ -10,6 +10,7 @@
 #import "JSTopic.h"
 #import <UIImageView+WebCache.h>
 #import "JSTopicPictureView.h"
+#import "JSTopicVoiceView.h"
 
 @interface JSTopicCell ()
 
@@ -57,6 +58,11 @@
  */
 @property (nonatomic, weak) JSTopicPictureView *pictureView;
 
+/**
+ *  声音帖子中间的内容
+ */
+@property (nonatomic, weak) JSTopicVoiceView *voiceView;
+
 @end
 
 @implementation JSTopicCell
@@ -68,6 +74,15 @@
         _pictureView = pictureView;
     }
     return _pictureView;
+}
+
+- (JSTopicVoiceView *)voiceView {
+    if (!_voiceView) {
+        JSTopicVoiceView *voiceView = [JSTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
 }
 
 - (void)awakeFromNib {
@@ -114,6 +129,8 @@
 //        JSLog(@"%@", NSStringFromCGRect(topic.pictureViewFrame));
     } else if (topic.type == JSTopicTypeVoice) {
         // 声音帖子
+        self.voiceView.topic = topic;
+        self.voiceView.frame = topic.voiceViewFrame;
         
     }
     

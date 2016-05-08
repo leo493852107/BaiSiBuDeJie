@@ -20,7 +20,6 @@
 {
     @private
     CGFloat _cellHeight;
-    CGRect _pictureViewFrame;
 }
 
 + (NSDictionary *)replacedKeyFromPropertyName {
@@ -104,7 +103,13 @@
             
         } else if (self.type == JSTopicTypeVoice) {
             // 声音帖子
+            CGFloat voiceX = JSTopicCellMargin;
+            CGFloat voiceY = JSTopicCellTextY + textH + JSTopicCellMargin;
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceViewFrame = CGRectMake(voiceX, voiceY, voiceW, voiceH);
             
+            _cellHeight += voiceH + JSTopicCellMargin;
         }
         
         // 底部工具条的高度

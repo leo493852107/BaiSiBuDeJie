@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		502FD1A666E423236D86CC7A /* libPods-BaiSiBuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E103009AD7820AC5A3120EA /* libPods-BaiSiBuDeJie.a */; };
+		B3094E201CDF2D48000876C7 /* JSTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3094E1F1CDF2D48000876C7 /* JSTopicVoiceView.m */; };
+		B3094E221CDF2D67000876C7 /* JSTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3094E211CDF2D67000876C7 /* JSTopicVoiceView.xib */; };
 		B31FEDE01C7C59DE00AEB98E /* JSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDB21C7C59DE00AEB98E /* JSEssenceViewController.m */; };
 		B31FEDE11C7C59DE00AEB98E /* JSFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FEDB81C7C59DE00AEB98E /* JSFriendTrendsViewController.m */; };
 		B31FEDE21C7C59DE00AEB98E /* JSFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FEDB91C7C59DE00AEB98E /* JSFriendTrendsViewController.xib */; };
@@ -76,6 +78,9 @@
 
 /* Begin PBXFileReference section */
 		4E103009AD7820AC5A3120EA /* libPods-BaiSiBuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSiBuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3094E1E1CDF2D48000876C7 /* JSTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTopicVoiceView.h; sourceTree = "<group>"; };
+		B3094E1F1CDF2D48000876C7 /* JSTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTopicVoiceView.m; sourceTree = "<group>"; };
+		B3094E211CDF2D67000876C7 /* JSTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSTopicVoiceView.xib; sourceTree = "<group>"; };
 		B31FEDB11C7C59DE00AEB98E /* JSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEssenceViewController.h; sourceTree = "<group>"; };
 		B31FEDB21C7C59DE00AEB98E /* JSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEssenceViewController.m; sourceTree = "<group>"; };
 		B31FEDB71C7C59DE00AEB98E /* JSFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFriendTrendsViewController.h; sourceTree = "<group>"; };
@@ -271,6 +276,9 @@
 				B33411931C965D2300067002 /* JSTopicPictureView.xib */,
 				B334119A1C979C8200067002 /* JSProgressView.h */,
 				B334119B1C979C8200067002 /* JSProgressView.m */,
+				B3094E1E1CDF2D48000876C7 /* JSTopicVoiceView.h */,
+				B3094E1F1CDF2D48000876C7 /* JSTopicVoiceView.m */,
+				B3094E211CDF2D67000876C7 /* JSTopicVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -626,6 +634,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33411991C9706C100067002 /* JSShowPictureViewController.xib in Resources */,
+				B3094E221CDF2D67000876C7 /* JSTopicVoiceView.xib in Resources */,
 				B33411941C965D2300067002 /* JSTopicPictureView.xib in Resources */,
 				B334115B1C8D416000067002 /* JSLoginRegisterViewController.xib in Resources */,
 				B31FEDE21C7C59DE00AEB98E /* JSFriendTrendsViewController.xib in Resources */,
@@ -726,6 +735,7 @@
 				B33411DE1C999B5500067002 /* JSTabBar.m in Sources */,
 				B31FEDFA1C7C824700AEB98E /* Log+Foundation.m in Sources */,
 				B334115E1C8D904400067002 /* JSVerticalButton.m in Sources */,
+				B3094E201CDF2D48000876C7 /* JSTopicVoiceView.m in Sources */,
 				B31FEE0A1C7D94F200AEB98E /* JSRecommendUser.m in Sources */,
 				B33411631C8DA87900067002 /* JSTextField.m in Sources */,
 				B33411E21C999B7500067002 /* JSPushGuideView.m in Sources */,
