@@ -67,7 +67,8 @@
 /** 视频时长 */
 @property (nonatomic, assign) NSInteger videotime;
 
-
+/** 最热评论(期望这个数组中存放的是JSComment模型) */
+@property (nonatomic, strong) NSArray *top_cmt;
 
 
 /**

@@ -23,4 +23,6 @@ CGFloat const JSTopicCellPictureMaxH = 1000;
 /** 精华 cell 图片帖子一旦超过最大高度，就使用 Standard */
 CGFloat const JSTopicCellPictureStandardH = 250;
 
-
+/** JSUser模型-性别属性值 */
+NSString * const JSUserSexMale = @"m";
+NSString * const JSUserSexFemale = @"f";

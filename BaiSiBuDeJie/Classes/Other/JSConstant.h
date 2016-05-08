@@ -39,3 +39,7 @@ UIKIT_EXTERN CGFloat const JSTopicCellPictureMaxH;
 UIKIT_EXTERN CGFloat const JSTopicCellPictureStandardH;
 
 
+/** JSUser模型-性别属性值 */
+UIKIT_EXTERN NSString * const JSUserSexMale;
+UIKIT_EXTERN NSString * const JSUserSexFemale;
+

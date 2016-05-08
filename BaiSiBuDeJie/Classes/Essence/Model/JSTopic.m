@@ -8,13 +8,7 @@
 
 #import "JSTopic.h"
 #import <MJExtension.h>
-
-//@interface JSTopic ()
-//{
-//    CGFloat _cellHeight;
-//}
-//
-//@end
+#import "JSComment.h"
 
 @implementation JSTopic
 {
@@ -28,6 +22,10 @@
              @"large_image" : @"image1",
              @"middle_image" :@"image2"
              };
+}
+
++ (NSDictionary *)objectClassInArray {
+    return @{@"top_cmt" : [JSComment class]};
 }
 
 - (NSString *)passtime {
