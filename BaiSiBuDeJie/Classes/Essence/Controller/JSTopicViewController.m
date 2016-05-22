@@ -13,6 +13,7 @@
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "JSTopicCell.h"
+#import "JSCommentViewController.h"
 
 @interface JSTopicViewController ()
 
@@ -205,6 +206,11 @@ static NSString * const JSTopicCellID = @"topic";
     // 返回这个模型对应的cell的高度
     return topic.cellHeight;
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    JSCommentViewController *commentVC = [[JSCommentViewController alloc] init];
+    [self.navigationController pushViewController:commentVC animated:YES];
 }
 
 

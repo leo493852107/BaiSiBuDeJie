@@ -61,6 +61,8 @@
 		B35624051C78237D00D4D8C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624041C78237D00D4D8C7 /* main.m */; };
 		B356241E1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B356241D1C78237D00D4D8C7 /* BaiSiBuDeJieTests.m */; };
 		B35624291C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */; };
+		B3DE8E951CF1C38A00946405 /* JSCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DE8E931CF1C38A00946405 /* JSCommentViewController.m */; };
+		B3DE8E961CF1C38A00946405 /* JSCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DE8E941CF1C38A00946405 /* JSCommentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +179,9 @@
 		B35624241C78237D00D4D8C7 /* BaiSiBuDeJieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaiSiBuDeJieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35624281C78237D00D4D8C7 /* BaiSiBuDeJieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaiSiBuDeJieUITests.m; sourceTree = "<group>"; };
 		B356242A1C78237D00D4D8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3DE8E921CF1C38A00946405 /* JSCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCommentViewController.h; sourceTree = "<group>"; };
+		B3DE8E931CF1C38A00946405 /* JSCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCommentViewController.m; sourceTree = "<group>"; };
+		B3DE8E941CF1C38A00946405 /* JSCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSCommentViewController.xib; sourceTree = "<group>"; };
 		BF8FB0F75DE8322B2A8EE0F8 /* Pods-BaiSiBuDeJie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.debug.xcconfig"; sourceTree = "<group>"; };
 		E56D6226B2826712761A54DE /* Pods-BaiSiBuDeJie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiSiBuDeJie.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiSiBuDeJie/Pods-BaiSiBuDeJie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,6 +263,9 @@
 				B33411951C9706C100067002 /* JSShowPictureViewController.h */,
 				B33411961C9706C100067002 /* JSShowPictureViewController.m */,
 				B33411971C9706C100067002 /* JSShowPictureViewController.xib */,
+				B3DE8E921CF1C38A00946405 /* JSCommentViewController.h */,
+				B3DE8E931CF1C38A00946405 /* JSCommentViewController.m */,
+				B3DE8E941CF1C38A00946405 /* JSCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -662,6 +670,7 @@
 				B33411601C8D91F600067002 /* Assets.xcassets in Resources */,
 				B33411E81C999BBA00067002 /* JSPublishView.xib in Resources */,
 				B31FF0481C8705F700AEB98E /* JSRecommendTagCell.xib in Resources */,
+				B3DE8E961CF1C38A00946405 /* JSCommentViewController.xib in Resources */,
 				B33411891C92E5AE00067002 /* JSTopicCell.xib in Resources */,
 				B31FEE071C7D8DE400AEB98E /* JSRecommendUserCell.xib in Resources */,
 				B33411E31C999B7500067002 /* JSPushGuideView.xib in Resources */,
@@ -768,6 +777,7 @@
 				B33411EB1C999CFF00067002 /* JSNavigationController.m in Sources */,
 				B31FF0401C87047D00AEB98E /* JSRecommendTag.m in Sources */,
 				B334119C1C979C8200067002 /* JSProgressView.m in Sources */,
+				B3DE8E951CF1C38A00946405 /* JSCommentViewController.m in Sources */,
 				B31FEDE11C7C59DE00AEB98E /* JSFriendTrendsViewController.m in Sources */,
 				B33411981C9706C100067002 /* JSShowPictureViewController.m in Sources */,
 				B35624051C78237D00D4D8C7 /* main.m in Sources */,
