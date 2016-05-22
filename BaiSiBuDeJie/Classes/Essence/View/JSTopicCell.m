@@ -12,6 +12,8 @@
 #import "JSTopicPictureView.h"
 #import "JSTopicVoiceView.h"
 #import "JSTopicVideoView.h"
+#import "JSComment.h"
+#import "JSUser.h"
 
 @interface JSTopicCell ()
 
@@ -69,6 +71,11 @@
  */
 @property (nonatomic, weak) JSTopicVideoView *videoView;
 
+/** 最热评论的内容 */
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+
+/** 最热评论的整体 */
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
 
 
 @end
@@ -165,6 +172,16 @@
         self.voiceView.hidden = YES;
         self.pictureView.hidden = YES;
     }
+    
+    // 处理最热评论 (用hidden 是为了循环利用)
+    JSComment *cmt = [topic.top_cmt firstObject];
+    if (cmt) {
+        self.topCmtView.hidden = NO;
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+    } else {
+        self.topCmtView.hidden = YES;
+    }
+    
     
 }
 

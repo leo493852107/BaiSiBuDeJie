@@ -9,6 +9,7 @@
 #import "JSTopic.h"
 #import <MJExtension.h>
 #import "JSComment.h"
+#import "JSUser.h"
 
 @implementation JSTopic
 {
@@ -118,6 +119,13 @@
             
             _cellHeight += videoH + JSTopicCellMargin;
 
+        }
+        
+        JSComment *cmt = self.top_cmt.firstObject;
+        if (cmt) {
+            NSString *content = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            _cellHeight += JSTopicCellTopCmtTitleH + contentH + JSTopicCellMargin;
         }
         
         // 底部工具条的高度

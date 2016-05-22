@@ -13,8 +13,11 @@ CGFloat const JSTopicCellMargin = 10;
 /** 精华 cell 文字内容的Y值  */
 CGFloat const JSTopicCellTextY = 55;
 
+/** 精华 cell 最热评论标题的高度  */
+CGFloat const JSTopicCellTopCmtTitleH = 20;
+
 /** 精华 cell 底部工具条的高度 */
-CGFloat const JSTopicCellBottomBarH = 44;
+CGFloat const JSTopicCellBottomBarH = 35;
 
 
 /** 精华 cell 图片帖子的最大高度 */
