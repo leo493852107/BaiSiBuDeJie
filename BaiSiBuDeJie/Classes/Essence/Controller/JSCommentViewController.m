@@ -27,6 +27,9 @@
 /** 最新评论 */
 @property (nonatomic, strong) NSMutableArray *latestComments;
 
+/** 保存帖子的 top_cmt */
+@property (nonatomic, strong) NSArray *saved_top_cmt;
+
 @end
 
 @implementation JSCommentViewController
@@ -79,6 +82,13 @@
     // 创建 header
     UIView *header = [[UIView alloc] init];
     
+    // 清空 top_cmt
+    if (self.topic.top_cmt.count) {
+        self.saved_top_cmt = self.topic.top_cmt;
+        self.topic.top_cmt = nil;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
+    
     // 添加 cell
     JSTopicCell *cell = [JSTopicCell cell];
     cell.topic = self.topic;
@@ -117,6 +127,12 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    // 恢复帖子的 top_cmt
+    if (self.saved_top_cmt.count) {
+        self.topic.top_cmt = self.saved_top_cmt;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
 }
 
 /** 返回第section组的所有评论数据 */
