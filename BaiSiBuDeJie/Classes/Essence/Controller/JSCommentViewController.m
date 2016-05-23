@@ -28,7 +28,7 @@
 @property (nonatomic, strong) NSMutableArray *latestComments;
 
 /** 保存帖子的 top_cmt */
-@property (nonatomic, strong) NSArray *saved_top_cmt;
+@property (nonatomic, strong) JSComment *saved_top_cmt;
 
 @end
 
@@ -83,7 +83,7 @@
     UIView *header = [[UIView alloc] init];
     
     // 清空 top_cmt
-    if (self.topic.top_cmt.count) {
+    if (self.topic.top_cmt) {
         self.saved_top_cmt = self.topic.top_cmt;
         self.topic.top_cmt = nil;
         [self.topic setValue:@0 forKeyPath:@"cellHeight"];
@@ -129,7 +129,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     // 恢复帖子的 top_cmt
-    if (self.saved_top_cmt.count) {
+    if (self.saved_top_cmt) {
         self.topic.top_cmt = self.saved_top_cmt;
         [self.topic setValue:@0 forKeyPath:@"cellHeight"];
     }
