@@ -36,6 +36,9 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TG-dH-WHT" userLabel="评论内容">
                         <rect key="frame" x="55" y="40" width="154" height="111.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="6gd-wr-CbN"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -58,8 +61,23 @@
                         <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkW-W7-uPV" userLabel="音频按钮">
+                        <rect key="frame" x="55" y="40" width="62" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="963-we-k67"/>
+                            <constraint firstAttribute="width" constant="62" id="MBk-Rn-0aJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="45" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="12''" image="play-voice-stop" backgroundImage="play-voice-bg">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="play-voice-bg-select"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="WkW-W7-uPV" firstAttribute="top" secondItem="2TG-dH-WHT" secondAttribute="top" id="0mn-MV-Sfn"/>
                     <constraint firstItem="2TG-dH-WHT" firstAttribute="top" secondItem="Qhe-hu-Yxc" secondAttribute="bottom" constant="10" id="8rT-G6-J5q"/>
                     <constraint firstItem="Qhe-hu-Yxc" firstAttribute="bottom" secondItem="nvB-nd-GVe" secondAttribute="bottom" id="Egl-Lc-j5X"/>
                     <constraint firstItem="nvB-nd-GVe" firstAttribute="leading" secondItem="Sbf-qS-izN" secondAttribute="trailing" id="FpB-Vc-4gI"/>
@@ -71,6 +89,7 @@
                     <constraint firstItem="Sbf-qS-izN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="f3i-le-zZ7"/>
                     <constraint firstItem="mCp-rR-kRy" firstAttribute="leading" secondItem="2TG-dH-WHT" secondAttribute="trailing" id="hB2-GB-J2f"/>
                     <constraint firstItem="Qhe-hu-Yxc" firstAttribute="top" secondItem="nvB-nd-GVe" secondAttribute="top" id="hgn-ZC-X5o"/>
+                    <constraint firstItem="WkW-W7-uPV" firstAttribute="leading" secondItem="2TG-dH-WHT" secondAttribute="leading" id="i4T-7R-Qg7"/>
                     <constraint firstAttribute="bottom" secondItem="2TG-dH-WHT" secondAttribute="bottom" constant="10" id="qKJ-rl-cPN"/>
                     <constraint firstItem="2TG-dH-WHT" firstAttribute="leading" secondItem="Sbf-qS-izN" secondAttribute="trailing" constant="10" id="rXc-Em-jcN"/>
                     <constraint firstItem="mCp-rR-kRy" firstAttribute="trailing" secondItem="boB-As-83T" secondAttribute="trailing" id="tBo-jI-Uf1"/>
@@ -83,6 +102,7 @@
                 <outlet property="profileImageView" destination="Sbf-qS-izN" id="UKW-0J-Ra2"/>
                 <outlet property="sexView" destination="nvB-nd-GVe" id="gDx-k8-b5M"/>
                 <outlet property="userNameLabel" destination="Qhe-hu-Yxc" id="2I3-b6-hRU"/>
+                <outlet property="voiceBtn" destination="WkW-W7-uPV" id="gmb-U5-tOv"/>
             </connections>
             <point key="canvasLocation" x="354.5" y="401"/>
         </tableViewCell>
@@ -91,5 +111,8 @@
         <image name="Profile_manIcon" width="13" height="13"/>
         <image name="commentLikeButton" width="18" height="18"/>
         <image name="commentLikeButtonClick" width="19" height="19"/>
+        <image name="play-voice-bg" width="62" height="22"/>
+        <image name="play-voice-bg-select" width="74" height="24"/>
+        <image name="play-voice-stop" width="12" height="12"/>
     </resources>
 </document>
