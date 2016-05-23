@@ -29,6 +29,12 @@
 
 @implementation JSCommentCell
 
+- (void)awakeFromNib {
+    UIImageView *bgView = [[UIImageView alloc] init];
+    bgView.image = [UIImage imageNamed:@"mainCellBackground"];
+    self.backgroundView = bgView;
+}
+
 - (void)setComment:(JSComment *)comment {
     _comment = comment;
     
@@ -47,15 +53,12 @@
     
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setFrame:(CGRect)frame {
+    
+    frame.origin.x = JSTopicCellMargin;
+    frame.size.width -= 2 * JSTopicCellMargin;
+    
+    [super setFrame:frame];
 }
 
 @end

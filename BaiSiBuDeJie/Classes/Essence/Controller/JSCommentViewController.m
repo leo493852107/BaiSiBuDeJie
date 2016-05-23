@@ -32,10 +32,22 @@ static NSString * const JSCommentId = @"comment";
 /** 保存帖子的 top_cmt */
 @property (nonatomic, strong) JSComment *saved_top_cmt;
 
+/** 保存当前的页码 */
+@property (nonatomic, assign) NSInteger page;
+
+/** 管理者 */
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
+
 @end
 
 @implementation JSCommentViewController
 
+- (AFHTTPSessionManager *)manager {
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,9 +64,61 @@ static NSString * const JSCommentId = @"comment";
     
     [self.tableView.header beginRefreshing];
     
+    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
+    self.tableView.footer.hidden =  YES;
+}
+
+- (void)loadMoreComments {
+    // 结束之前的所有请求 cancel 会调用failure方法
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    // 页码处理
+    NSInteger page = self.page++;
+    
+    // 参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topic.ID;
+    params[@"page"] = @(page);
+    JSComment *cmt = [self.latestComments lastObject];
+    params[@"lastcid"] = cmt.ID;
+    
+    [_manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        // 最新评论
+        NSArray *comments = [JSComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        
+        [self.latestComments addObjectsFromArray:comments];
+        
+        // 页码处理
+        self.page = page;
+        
+        // 刷新表格数据
+        [self.tableView reloadData];
+        
+        //        [responseObject writeToFile:@"/Users/leo/Desktop/tiezi.plist" atomically:YES];
+        
+        // 控制footer的状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.latestComments.count >= total) {
+            // 全部加载完毕
+            //            [self.tableView.footer noticeNoMoreData];
+            self.tableView.footer.hidden = YES;
+        } else {
+            // 结束刷新状态
+            [self.tableView.footer endRefreshing];
+        }
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.tableView.footer endRefreshing];
+    }];
 }
 
 - (void)loadNewComments {
+    // 结束之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"dataList";
@@ -62,18 +126,34 @@ static NSString * const JSCommentId = @"comment";
     params[@"data_id"] = self.topic.ID;
     params[@"hot"] = @"1";
     
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+    [_manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         // 最热评论
         self.hotComments = [JSComment objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         
         // 最新评论
         self.latestComments = [JSComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
         
+        // 页码，以前的数据都不要了
+        self.page = 1;
+        
+        // 刷新数据
         [self.tableView reloadData];
         
 //        [responseObject writeToFile:@"/Users/leo/Desktop/tiezi.plist" atomically:YES];
         
+        // 结束刷新
         [self.tableView.header endRefreshing];
+        
+        // 控制footer的状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.latestComments.count >= total) {
+            // 全部加载完毕
+//            [self.tableView.footer noticeNoMoreData];
+            self.tableView.footer.hidden = YES;
+        } else {
+            
+        }
+        
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [self.tableView.header endRefreshing];
     }];
@@ -120,6 +200,13 @@ static NSString * const JSCommentId = @"comment";
     
     // 注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JSCommentCell class]) bundle:nil] forCellReuseIdentifier:JSCommentId];
+    
+    // 去掉分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    // 内边距
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, JSTopicCellMargin, 0);
+    
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)note {
@@ -143,6 +230,11 @@ static NSString * const JSCommentId = @"comment";
         self.topic.top_cmt = self.saved_top_cmt;
         [self.topic setValue:@0 forKeyPath:@"cellHeight"];
     }
+    
+    // 取消所有任务
+//    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    [self.manager invalidateSessionCancelingTasks:YES];
+    
 }
 
 /** 返回第section组的所有评论数据 */
@@ -177,8 +269,13 @@ static NSString * const JSCommentId = @"comment";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     NSInteger hotCount = self.hotComments.count;
     NSInteger latestCount = self.latestComments.count;
+    
+    // 隐藏尾部控件
+    tableView.footer.hidden = (latestCount == 0);
+    
     if (section == 0) {
         return hotCount ? hotCount : latestCount;
     }

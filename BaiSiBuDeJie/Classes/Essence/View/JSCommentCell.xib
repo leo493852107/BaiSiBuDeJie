@@ -38,10 +38,16 @@
                         <rect key="frame" x="55" y="40" width="154" height="111.5"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="6gd-wr-CbN"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="HIa-T4-8sl"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6gd-wr-CbN"/>
+                            </mask>
+                        </variation>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boB-As-83T" userLabel="点赞按钮">
                         <rect key="frame" x="219" y="10" width="30" height="30"/>

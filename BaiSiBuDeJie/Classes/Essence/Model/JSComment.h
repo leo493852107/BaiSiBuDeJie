@@ -12,6 +12,8 @@
 
 @interface JSComment : NSObject
 
+/** id */
+@property (nonatomic, copy) NSString *ID;
 /** 音频文件的时长 */
 @property (nonatomic, assign) NSInteger voicetime;
 
