@@ -14,7 +14,9 @@
 #import "JSComment.h"
 #import <MJExtension.h>
 #import "JSCommentHeaderView.h"
+#import "JSCommentCell.h"
 
+static NSString * const JSCommentId = @"comment";
 
 @interface JSCommentViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -109,7 +111,15 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
+    // cell的高度设置
+    self.tableView.estimatedRowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    // 背景色
     self.tableView.backgroundColor = JSGlobalBackGroundColor;
+    
+    // 注册
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JSCommentCell class]) bundle:nil] forCellReuseIdentifier:JSCommentId];
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)note {
@@ -261,14 +271,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"comment"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"comment"];
-    }
+    JSCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:JSCommentId];
     
-    JSComment *comment = [self commentInIndexPath:indexPath];
-    
-    cell.textLabel.text = comment.content;
+    cell.comment = [self commentInIndexPath:indexPath];
     
     return cell;
 }

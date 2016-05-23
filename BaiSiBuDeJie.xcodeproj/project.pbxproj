@@ -34,6 +34,8 @@
 		B31FF0471C8705F700AEB98E /* JSRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FF0451C8705F700AEB98E /* JSRecommendTagCell.m */; };
 		B31FF0481C8705F700AEB98E /* JSRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FF0461C8705F700AEB98E /* JSRecommendTagCell.xib */; };
 		B32E71FB1CF2E2B600007EF0 /* JSCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B32E71FA1CF2E2B600007EF0 /* JSCommentHeaderView.m */; };
+		B32E71FF1CF2F7FB00007EF0 /* JSCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B32E71FD1CF2F7FB00007EF0 /* JSCommentCell.m */; };
+		B32E72001CF2F7FB00007EF0 /* JSCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B32E71FE1CF2F7FB00007EF0 /* JSCommentCell.xib */; };
 		B334115A1C8D416000067002 /* JSLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411581C8D416000067002 /* JSLoginRegisterViewController.m */; };
 		B334115B1C8D416000067002 /* JSLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411591C8D416000067002 /* JSLoginRegisterViewController.xib */; };
 		B334115E1C8D904400067002 /* JSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B334115D1C8D904400067002 /* JSVerticalButton.m */; };
@@ -130,6 +132,9 @@
 		B31FF0461C8705F700AEB98E /* JSRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRecommendTagCell.xib; sourceTree = "<group>"; };
 		B32E71F91CF2E2B600007EF0 /* JSCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCommentHeaderView.h; sourceTree = "<group>"; };
 		B32E71FA1CF2E2B600007EF0 /* JSCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCommentHeaderView.m; sourceTree = "<group>"; };
+		B32E71FC1CF2F7FB00007EF0 /* JSCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCommentCell.h; sourceTree = "<group>"; };
+		B32E71FD1CF2F7FB00007EF0 /* JSCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCommentCell.m; sourceTree = "<group>"; };
+		B32E71FE1CF2F7FB00007EF0 /* JSCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSCommentCell.xib; sourceTree = "<group>"; };
 		B33411571C8D416000067002 /* JSLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLoginRegisterViewController.h; sourceTree = "<group>"; };
 		B33411581C8D416000067002 /* JSLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLoginRegisterViewController.m; sourceTree = "<group>"; };
 		B33411591C8D416000067002 /* JSLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSLoginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -310,6 +315,9 @@
 				B3094E261CDF5E88000876C7 /* JSTopicVideoView.xib */,
 				B32E71F91CF2E2B600007EF0 /* JSCommentHeaderView.h */,
 				B32E71FA1CF2E2B600007EF0 /* JSCommentHeaderView.m */,
+				B32E71FC1CF2F7FB00007EF0 /* JSCommentCell.h */,
+				B32E71FD1CF2F7FB00007EF0 /* JSCommentCell.m */,
+				B32E71FE1CF2F7FB00007EF0 /* JSCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -666,6 +674,7 @@
 			files = (
 				B33411991C9706C100067002 /* JSShowPictureViewController.xib in Resources */,
 				B3094E221CDF2D67000876C7 /* JSTopicVoiceView.xib in Resources */,
+				B32E72001CF2F7FB00007EF0 /* JSCommentCell.xib in Resources */,
 				B33411941C965D2300067002 /* JSTopicPictureView.xib in Resources */,
 				B334115B1C8D416000067002 /* JSLoginRegisterViewController.xib in Resources */,
 				B31FEDE21C7C59DE00AEB98E /* JSFriendTrendsViewController.xib in Resources */,
@@ -777,6 +786,7 @@
 				B33411E21C999B7500067002 /* JSPushGuideView.m in Sources */,
 				B34DF43F1CDF80F700F90919 /* JSComment.m in Sources */,
 				B31FEDE71C7C59DE00AEB98E /* UIView+JSExtension.m in Sources */,
+				B32E71FF1CF2F7FB00007EF0 /* JSCommentCell.m in Sources */,
 				B33411811C92E0EE00067002 /* JSConstant.m in Sources */,
 				B31FEDFD1C7C90A000AEB98E /* JSRecommendCategory.m in Sources */,
 				B31FF03D1C87028F00AEB98E /* JSRecommendTagsViewController.m in Sources */,
@@ -915,7 +925,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BaiSiBuDeJie/Classes/Other/leoPch.pch";
 				INFOPLIST_FILE = BaiSiBuDeJie/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leo.BaiSiBuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -933,7 +943,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BaiSiBuDeJie/Classes/Other/leoPch.pch";
 				INFOPLIST_FILE = BaiSiBuDeJie/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leo.BaiSiBuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
