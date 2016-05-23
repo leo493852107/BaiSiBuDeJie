@@ -9,6 +9,10 @@
 #import "JSCommentViewController.h"
 #import "JSTopicCell.h"
 #import "JSTopic.h"
+#import <MJRefresh.h>
+#import <AFNetworking.h>
+#import "JSComment.h"
+#import <MJExtension.h>
 
 @interface JSCommentViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -16,9 +20,15 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpace;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+/** 最热评论 */
+@property (nonatomic, strong) NSArray *hotComments;
+/** 最新评论 */
+@property (nonatomic, strong) NSMutableArray *latestComments;
+
 @end
 
 @implementation JSCommentViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,8 +37,40 @@
     
     [self setUpHeader];
     
+    [self setUpRefresh];
 }
 
+- (void)setUpRefresh {
+    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
+    
+    [self.tableView.header beginRefreshing];
+    
+}
+
+- (void)loadNewComments {
+    // 参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topic.ID;
+    params[@"hot"] = @"1";
+    
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        // 最热评论
+        self.hotComments = [JSComment objectArrayWithKeyValuesArray:responseObject[@"hot"]];
+        
+        // 最新评论
+        self.latestComments = [JSComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        
+        [self.tableView reloadData];
+        
+//        [responseObject writeToFile:@"/Users/leo/Desktop/tiezi.plist" atomically:YES];
+        
+        [self.tableView.header endRefreshing];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.tableView.header endRefreshing];
+    }];
+}
 
 - (void)setUpHeader {
     
@@ -75,6 +117,18 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+/** 返回第section组的所有评论数据 */
+- (NSArray *)commentsInSection:(NSInteger)section {
+    if (section == 0) {
+        return self.hotComments.count ? self.hotComments : self.latestComments;
+    }
+    return self.latestComments;
+}
+
+- (JSComment *)commentInIndexPath:(NSIndexPath *)indexPath {
+    return [self commentsInSection:indexPath.section][indexPath.row];
+}
+
 #pragma mark - <UITableViewDelegate>
 // 拖拽
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -83,15 +137,34 @@
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    NSInteger hotCount = self.hotComments.count;
+    NSInteger latestCount = self.latestComments.count;
+    if (hotCount) { // 最热评论 + 最新评论 2组
+        return 2;
+    }
+    if (latestCount) { // 有最新评论 1组
+        return 1;
+    }
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    NSInteger hotCount = self.hotComments.count;
+    NSInteger latestCount = self.latestComments.count;
+    if (section == 0) {
+        return hotCount ? hotCount : latestCount;
+    }
+    
+    // 非第 0 组
+    return latestCount;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"评论";
+    NSInteger hotCount = self.hotComments.count;
+    if (section == 0) {
+        return hotCount ? @"最热评论" : @"最新评论";
+    }
+    return @"最新评论";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -100,7 +173,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"comment"];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%zd - %zd", indexPath.section, indexPath.row];
+    JSComment *comment = [self commentInIndexPath:indexPath];
+    
+    cell.textLabel.text = comment.content;
     
     return cell;
 }

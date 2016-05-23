@@ -17,11 +17,13 @@
     CGFloat _cellHeight;
 }
 
+// !!! 转换特殊参数
 + (NSDictionary *)replacedKeyFromPropertyName {
     return @{
              @"small_image" : @"image0",
              @"large_image" : @"image1",
-             @"middle_image" :@"image2"
+             @"middle_image" : @"image2",
+             @"ID" : @"id"
              };
 }
 

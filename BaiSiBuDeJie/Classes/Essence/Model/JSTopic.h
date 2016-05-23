@@ -10,6 +10,9 @@
 
 @interface JSTopic : NSObject
 
+/** id */
+@property (nonatomic, copy) NSString *ID;
+
 /** 名称 */
 @property (nonatomic, copy) NSString *name;
 

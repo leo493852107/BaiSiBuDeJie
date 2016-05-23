@@ -40,8 +40,11 @@
                             <constraint firstAttribute="width" constant="19" id="SFq-X3-hk9"/>
                             <constraint firstAttribute="height" constant="20" id="gRy-jD-mkP"/>
                         </constraints>
-                        <state key="normal" title="Button" backgroundImage="cellFollowIcon"/>
-                        <state key="highlighted" backgroundImage="cellFollowClickIcon"/>
+                        <state key="normal" title="Button" image="cellmorebtnnormal"/>
+                        <state key="highlighted" image="cellmorebtnclick"/>
+                        <connections>
+                            <action selector="more" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Gti-Ag-Zd7"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEc-7n-DfG" userLabel="底部工具条">
                         <rect key="frame" x="0.0" y="344" width="320" height="35"/>
@@ -156,7 +159,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXh-CZ-cnl" userLabel="最热评论父控件">
-                        <rect key="frame" x="10" y="267.5" width="300" height="67"/>
+                        <rect key="frame" x="10" y="267" width="300" height="67"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SP-n0-yf8">
                                 <rect key="frame" x="0.0" y="0.0" width="56" height="20"/>
@@ -243,8 +246,8 @@
         <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cell-content-line" width="299" height="1"/>
-        <image name="cellFollowClickIcon" width="19" height="20"/>
-        <image name="cellFollowIcon" width="19" height="20"/>
+        <image name="cellmorebtnclick" width="24" height="20"/>
+        <image name="cellmorebtnnormal" width="24" height="20"/>
         <image name="mainCellCai" width="20" height="20"/>
         <image name="mainCellCaiClick" width="20" height="20"/>
         <image name="mainCellComment" width="20" height="20"/>
