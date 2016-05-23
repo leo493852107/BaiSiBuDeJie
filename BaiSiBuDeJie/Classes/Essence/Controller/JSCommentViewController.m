@@ -10,7 +10,7 @@
 #import "JSTopicCell.h"
 #import "JSTopic.h"
 
-@interface JSCommentViewController () <UITableViewDelegate>
+@interface JSCommentViewController () <UITableViewDelegate,UITableViewDataSource>
 
 /** 工具条间距 */
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpace;
@@ -29,18 +29,23 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [self viewDidAppear:animated];
-    JSLog(@"%f", self.tableView.tableHeaderView.height);
-    
-}
+
 - (void)setUpHeader {
+    
+    // 创建 header
+    UIView *header = [[UIView alloc] init];
+    
+    // 添加 cell
     JSTopicCell *cell = [JSTopicCell cell];
     cell.topic = self.topic;
-    cell.height = self.topic.cellHeight;
-    self.tableView.tableHeaderView = cell;
+    cell.size = CGSizeMake(JSScreenW, self.topic.cellHeight);
+    [header addSubview:cell];
     
-    JSLog(@"%f", cell.height);
+    // header 高度
+    header.height = self.topic.cellHeight + JSTopicCellMargin + 50;
+    
+    // 设置 header
+    self.tableView.tableHeaderView = header;
     
 }
 
@@ -49,6 +54,8 @@
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem initWithImage:@"comment_nav_item_share_icon" highImage:@"comment_nav_item_share_icon_click" target:nil action:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    
+    self.tableView.backgroundColor = JSGlobalBackGroundColor;
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)note {
@@ -73,6 +80,31 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self.view endEditing:YES];
 }
+
+#pragma mark - <UITableViewDataSource>
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"评论";
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"comment"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"comment"];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%zd - %zd", indexPath.section, indexPath.row];
+    
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
