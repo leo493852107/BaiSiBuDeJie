@@ -13,6 +13,8 @@
 #import <AFNetworking.h>
 #import "JSComment.h"
 #import <MJExtension.h>
+#import "JSCommentHeaderView.h"
+
 
 @interface JSCommentViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -167,26 +169,78 @@
 //    return @"最新评论";
 //}
 
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    // 创建头部
+//    UIView *header = [[UIView alloc] init];
+//    header.backgroundColor = JSGlobalBackGroundColor;
+//    
+//    // 创建label
+//    UILabel *label = [[UILabel alloc] init];
+//    label.textColor = JSRGBColor(67, 67, 67);
+//    label.width = 200;
+//    label.x = JSTopicCellMargin;
+//    label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+//    [header addSubview:label];
+//    
+//    // 设置文字
+//    NSInteger hotCount = self.hotComments.count;
+//    if (section == 0) {
+//        label.text = hotCount ? @"最热评论" : @"最新评论";
+//    } else {
+//        label.text = @"最新评论";
+//    }
+//    return header;
+//}
+
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    static NSString *ID = @"header";
+//    // 先从缓存池中找 header
+//    UITableViewHeaderFooterView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:ID];
+//    
+//    UILabel *label = nil;
+//    
+//    if (header == nil) {
+//        // 缓存池中没有，自己创建
+//        header = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:ID];
+//        header.contentView.backgroundColor = JSGlobalBackGroundColor;
+//        // 创建label
+//        label = [[UILabel alloc] init];
+//        label.textColor = JSRGBColor(67, 67, 67);
+//        label.width = 200;
+//        label.x = JSTopicCellMargin;
+//        label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+//        label.tag = JSHeaderLabelTag;
+//        [header.contentView addSubview:label];
+//    } else {
+//        // 从缓存池中取出
+//        label = (UILabel *)[header viewWithTag:JSHeaderLabelTag];
+//        
+//    }
+//    
+//    // 设置label数据
+//    NSInteger hotCount = self.hotComments.count;
+//    if (section == 0) {
+//        label.text = hotCount ? @"最热评论" : @"最新评论";
+//    } else {
+//        label.text = @"最新评论";
+//    }
+//
+//    
+//    return header;
+//}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    // 创建头部
-    UIView *header = [[UIView alloc] init];
-    header.backgroundColor = JSGlobalBackGroundColor;
+    // 先从缓存池中找 header
+    JSCommentHeaderView *header = [JSCommentHeaderView headerViewWithTableView:tableView];
     
-    // 创建label
-    UILabel *label = [[UILabel alloc] init];
-    label.textColor = JSRGBColor(67, 67, 67);
-    label.width = 200;
-    label.x = JSTopicCellMargin;
-    label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-    [header addSubview:label];
-    
-    // 设置文字
+    // 设置label数据
     NSInteger hotCount = self.hotComments.count;
     if (section == 0) {
-        label.text = hotCount ? @"最热评论" : @"最新评论";
+        header.title = hotCount ? @"最热评论" : @"最新评论";
     } else {
-        label.text = @"最新评论";
+        header.title = @"最新评论";
     }
+    
     return header;
 }
 

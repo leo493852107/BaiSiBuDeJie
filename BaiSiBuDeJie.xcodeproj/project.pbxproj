@@ -33,6 +33,7 @@
 		B31FF0401C87047D00AEB98E /* JSRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FF03F1C87047D00AEB98E /* JSRecommendTag.m */; };
 		B31FF0471C8705F700AEB98E /* JSRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B31FF0451C8705F700AEB98E /* JSRecommendTagCell.m */; };
 		B31FF0481C8705F700AEB98E /* JSRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B31FF0461C8705F700AEB98E /* JSRecommendTagCell.xib */; };
+		B32E71FB1CF2E2B600007EF0 /* JSCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B32E71FA1CF2E2B600007EF0 /* JSCommentHeaderView.m */; };
 		B334115A1C8D416000067002 /* JSLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B33411581C8D416000067002 /* JSLoginRegisterViewController.m */; };
 		B334115B1C8D416000067002 /* JSLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33411591C8D416000067002 /* JSLoginRegisterViewController.xib */; };
 		B334115E1C8D904400067002 /* JSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B334115D1C8D904400067002 /* JSVerticalButton.m */; };
@@ -127,6 +128,8 @@
 		B31FF0441C8705F700AEB98E /* JSRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRecommendTagCell.h; sourceTree = "<group>"; };
 		B31FF0451C8705F700AEB98E /* JSRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRecommendTagCell.m; sourceTree = "<group>"; };
 		B31FF0461C8705F700AEB98E /* JSRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRecommendTagCell.xib; sourceTree = "<group>"; };
+		B32E71F91CF2E2B600007EF0 /* JSCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCommentHeaderView.h; sourceTree = "<group>"; };
+		B32E71FA1CF2E2B600007EF0 /* JSCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCommentHeaderView.m; sourceTree = "<group>"; };
 		B33411571C8D416000067002 /* JSLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLoginRegisterViewController.h; sourceTree = "<group>"; };
 		B33411581C8D416000067002 /* JSLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLoginRegisterViewController.m; sourceTree = "<group>"; };
 		B33411591C8D416000067002 /* JSLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSLoginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -305,6 +308,8 @@
 				B3094E231CDF5DB6000876C7 /* JSTopicVideoView.h */,
 				B3094E241CDF5DB6000876C7 /* JSTopicVideoView.m */,
 				B3094E261CDF5E88000876C7 /* JSTopicVideoView.xib */,
+				B32E71F91CF2E2B600007EF0 /* JSCommentHeaderView.h */,
+				B32E71FA1CF2E2B600007EF0 /* JSCommentHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -766,6 +771,7 @@
 				B31FEDFA1C7C824700AEB98E /* Log+Foundation.m in Sources */,
 				B334115E1C8D904400067002 /* JSVerticalButton.m in Sources */,
 				B3094E201CDF2D48000876C7 /* JSTopicVoiceView.m in Sources */,
+				B32E71FB1CF2E2B600007EF0 /* JSCommentHeaderView.m in Sources */,
 				B31FEE0A1C7D94F200AEB98E /* JSRecommendUser.m in Sources */,
 				B33411631C8DA87900067002 /* JSTextField.m in Sources */,
 				B33411E21C999B7500067002 /* JSPushGuideView.m in Sources */,
