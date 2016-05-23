@@ -16,4 +16,7 @@
  */
 @property (nonatomic, strong) JSTopic *topic;
 
+
++ (instancetype)cell;
+
 @end

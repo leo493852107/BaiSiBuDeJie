@@ -82,6 +82,10 @@
 
 @implementation JSTopicCell
 
++ (instancetype)cell {
+    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
+
 - (JSTopicPictureView *)pictureView {
     if (!_pictureView) {
         JSTopicPictureView *pictureView = [JSTopicPictureView pictureView];
@@ -240,7 +244,8 @@
     
     frame.origin.x = JSTopicCellMargin;
     frame.size.width -= 2 * JSTopicCellMargin;
-    frame.size.height -= JSTopicCellMargin;
+//    frame.size.height -= JSTopicCellMargin;
+    frame.size.height = self.topic.cellHeight - JSTopicCellMargin;
     frame.origin.y += JSTopicCellMargin;
     
     [super setFrame:frame];

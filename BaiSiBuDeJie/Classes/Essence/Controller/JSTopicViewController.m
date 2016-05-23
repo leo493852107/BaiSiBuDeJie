@@ -210,6 +210,7 @@ static NSString * const JSTopicCellID = @"topic";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     JSCommentViewController *commentVC = [[JSCommentViewController alloc] init];
+    commentVC.topic = self.topics[indexPath.row];
     [self.navigationController pushViewController:commentVC animated:YES];
 }
 

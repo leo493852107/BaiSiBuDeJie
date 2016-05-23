@@ -7,11 +7,14 @@
 //
 
 #import "JSCommentViewController.h"
+#import "JSTopicCell.h"
+#import "JSTopic.h"
 
 @interface JSCommentViewController () <UITableViewDelegate>
 
 /** 工具条间距 */
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpace;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -21,6 +24,23 @@
     [super viewDidLoad];
     
     [self setBasic];
+    
+    [self setUpHeader];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self viewDidAppear:animated];
+    JSLog(@"%f", self.tableView.tableHeaderView.height);
+    
+}
+- (void)setUpHeader {
+    JSTopicCell *cell = [JSTopicCell cell];
+    cell.topic = self.topic;
+    cell.height = self.topic.cellHeight;
+    self.tableView.tableHeaderView = cell;
+    
+    JSLog(@"%f", cell.height);
     
 }
 
