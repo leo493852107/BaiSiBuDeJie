@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		502FD1A666E423236D86CC7A /* libPods-BaiSiBuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E103009AD7820AC5A3120EA /* libPods-BaiSiBuDeJie.a */; };
+		B30822461CF33B330007C7D8 /* JSTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B30822451CF33B330007C7D8 /* JSTopWindow.m */; };
 		B3094E201CDF2D48000876C7 /* JSTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3094E1F1CDF2D48000876C7 /* JSTopicVoiceView.m */; };
 		B3094E221CDF2D67000876C7 /* JSTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3094E211CDF2D67000876C7 /* JSTopicVoiceView.xib */; };
 		B3094E251CDF5DB6000876C7 /* JSTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3094E241CDF5DB6000876C7 /* JSTopicVideoView.m */; };
@@ -87,6 +88,8 @@
 
 /* Begin PBXFileReference section */
 		4E103009AD7820AC5A3120EA /* libPods-BaiSiBuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiSiBuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30822441CF33B330007C7D8 /* JSTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTopWindow.h; sourceTree = "<group>"; };
+		B30822451CF33B330007C7D8 /* JSTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTopWindow.m; sourceTree = "<group>"; };
 		B3094E1E1CDF2D48000876C7 /* JSTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTopicVoiceView.h; sourceTree = "<group>"; };
 		B3094E1F1CDF2D48000876C7 /* JSTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTopicVoiceView.m; sourceTree = "<group>"; };
 		B3094E211CDF2D67000876C7 /* JSTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSTopicVoiceView.xib; sourceTree = "<group>"; };
@@ -501,6 +504,8 @@
 				B33411E11C999B7500067002 /* JSPushGuideView.xib */,
 				B33411DC1C999B5500067002 /* JSTabBar.h */,
 				B33411DD1C999B5500067002 /* JSTabBar.m */,
+				B30822441CF33B330007C7D8 /* JSTopWindow.h */,
+				B30822451CF33B330007C7D8 /* JSTopWindow.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -799,6 +804,7 @@
 				B35624051C78237D00D4D8C7 /* main.m in Sources */,
 				B334117E1C911B1800067002 /* JSTopic.m in Sources */,
 				B334115A1C8D416000067002 /* JSLoginRegisterViewController.m in Sources */,
+				B30822461CF33B330007C7D8 /* JSTopWindow.m in Sources */,
 				B31FF0471C8705F700AEB98E /* JSRecommendTagCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
